@@ -1,0 +1,6220 @@
+body{-webkit-animation:page-start .5s steps(1,end) 0s forwards;animation:page-start .5s steps(1,end) 0s forwards}@-webkit-keyframes page-start{from{visibility:hidden}to{visibility:visible}}@keyframes page-start{from{visibility:hidden}to{visibility:visible}}
+@charset "utf-8";html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{margin:0;padding:0;border:0;vertical-align:baseline}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+html{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:-moz-none;-ms-user-select:none}
+body {font-family:"SamsungOne", arial;line-height:1;color:#000;-webkit-text-size-adjust:none;}
+
+
+*{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+*, *:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+
+ol, ul{list-style:none}
+blockquote, q{	quotes:none}
+blockquote:before, blockquote:after, q:before, q:after{content:'';content:none}
+:focus{outline:0;}
+a{text-decoration:none}
+p{text-decoration:none;font-weight:normal;font-size:100%;-webkit-text-size-adjust:none;line-height:1.4}
+strong{text-decoration:none;font-weight:bold}
+cite, em, i{text-decoration:none;font-weight:normal;font-family:Arial, Helvetica, sans-serif;line-height:1;vertical-align:baseline}
+pre, code{text-decoration:none}
+ins{text-decoration:none}
+sup{text-decoration:none;bottom:5px;font-size:70%;vertical-align:baseline;font-weight:normal;position:relative}
+dl dt{text-decoration:none}
+dd{text-decoration:none}
+mark{text-decoration:none;font-weight:normal;vertical-align:baseline}
+del{text-decoration:line-through}
+img[alt]{font-size:0}
+
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight:normal;-webkit-text-size-adjust:none;font-family:"iCielSamsungSharpSansBold", arial;line-height:1.2}
+h1 strong, h2 strong, h3 strong, h4 strong, h5 strong, h6 strong{}
+
+@font-face {
+	font-family:'SamsungOne';
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2);
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.woff) format("woff"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-400.ttf) format("truetype");
+	font-weight:normal;
+	font-style:normal;
+	
+}
+
+@font-face {
+	font-family:'SamsungOne700';
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot);
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff2) format("woff2"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.woff) format("woff"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungOne-700.ttf) format("truetype");
+	font-weight:bold;
+	font-style:normal
+}
+
+@font-face {
+	font-family:'SamsungSharpSans';
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot);
+	src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.eot?#iefix) format("embedded-opentype"), url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SamsungSharpSansBd.woff) format("woff");
+	font-weight:bold;
+	font-style:normal
+}
+@font-face {
+    font-family:'iCielSamsungSharpSansBold';
+	src:url(https://cdn.samsung.com/etc/designs/smg/vn/font/SamsungSharpSans-Bold-UTF8.woff2);
+    font-weight:normal;
+    font-style:normal;
+
+}
+
+@font-face {
+    font-family:'iCielSamsungSharpSansMedium';
+	src:url(https://cdn.samsung.com/etc/designs/smg/vn/font/SamsungSharpSans-Bold-UTF8.woff2);
+    font-weight:normal;
+    font-style:normal;
+
+}
+@font-face {
+    font-family:'iCielSamsungSharpSansRegular';
+    src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/iCielSamsungSharpSansRegular.eot);
+    src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/iCielSamsungSharpSansRegular.eot?#iefix) format('embedded-opentype'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/iCielSamsungSharpSansRegular.woff) format('woff'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/iCielSamsungSharpSansRegular.ttf) format('truetype'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/iCielSamsungSharpSansRegular.svg#iCielSamsungSharpSansRegular) format('svg');
+    font-weight:normal;
+    font-style:normal;
+
+}
+@font-face {
+    font-family:'SignPainterHouseScript';
+    src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SignPainter-HouseScript.eot);
+    src:url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SignPainter-HouseScript.eot?#iefix) format('embedded-opentype'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SignPainter-HouseScript.woff) format('woff'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SignPainter-HouseScript.ttf) format('truetype'),
+         url(https://cdn.samsung.com/etc/designs/smg/global/fonts/SignPainter-HouseScript.svg#SignPainterHouseScript) format('svg');
+    font-weight:normal;
+    font-style:normal;
+
+}
+
+/*FULLPAGE*/
+.fs_main {
+	position:relative;
+	width:100%;
+	height:calc(100vh - 65px);
+	overflow:hidden;
+}
+
+.fs_main.fs_is_app {
+	height:calc(100vh - 60px) !important;
+}
+
+.fs_main_logo {
+	position:absolute;
+	left:38px;
+	top:38px;
+	width:auto;
+	height:auto;
+	line-height:0;
+	overflow:hidden;
+	z-index:12;
+	opacity:0;
+	-webkit-transition:opacity 0.3s ease-in-out;
+	transition:opacity 0.3s ease-in-out;
+}
+.fs_main_logo.show {
+	opacity:1;
+}
+
+.fs_main_logo a {
+	display:inline-block;
+}
+
+.fs_main_logo img {
+	display:inline-block;
+	width:auto;
+	height:auto;
+	max-width:153px;
+	
+}
+
+.fs_fullpage {
+	width:100%;
+	height:100%;
+	opacity:0
+}
+
+.fs_content {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	opacity:0;
+}
+
+.fs_swiper-slide-active .fs_content {
+	opacity:1;
+}
+
+.fs_bg {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:block;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center 100%;
+}
+
+.fs_bg_cm, .fs_bg_spv {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	display:block;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center 100%;
+}
+.fs_bg_spv {
+	display:none;
+	background-position:center center;
+}
+
+.fs_bg.fs_bg_hide {
+	opacity:0;
+}
+
+.fs_bg::before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.4);
+}
+
+.fs_bg_mask {
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:auto;
+	padding-top:10%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_landing_mash.jpg?$ORIGIN_JPG$) no-repeat center top;
+	background-size:auto 100%;
+	
+}
+
+.fs_wrapper{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	text-align:center;
+	font-size:0;
+}
+
+.fs_features {
+	position:relative;
+	display:block;	
+	margin-bottom:35px;
+}
+
+.fs_logo {
+	position:relative;
+	display:inline-block;
+	width:128px;
+	height:auto;
+	line-height:0;
+	overflow:hidden;
+	margin:0 0 68px 0;
+}
+
+.fs_logo img {
+	display:block;
+	height:auto;
+	width:100%;
+	margin:0 auto;
+}
+
+.fs_star_icon {
+	position:relative;
+	display:inline-block;
+	width:39px;
+	height:38px;
+	vertical-align:middle;
+}
+
+.fs_star_icon::before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon-normal.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_star_icon::after {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+	opacity:0;
+}
+
+.fs_star_icon::before, .fs_star_icon::after{
+	-webkit-transition:opacity 0.3s ease-in-out;
+	transition:opacity 0.3s ease-in-out;
+}
+
+.fs_features ul {
+	position:absolute;
+	bottom:0;
+	width:50%;
+}
+
+.fs_features li {
+	position:relative;
+	display:block;
+	cursor:pointer;
+	white-space:nowrap;
+}
+
+.fs_features ul:first-child {
+	left:0;
+	padding:0 11px 0 0;
+	text-align:right;
+}
+
+.fs_features ul:first-child li{
+	float:right;
+	clear:both;
+}
+
+.fs_features ul:last-child {
+	right:0;
+	padding:0 8px 0 0;
+	text-align:left;
+}
+
+.fs_features ul:last-child li{
+	float:left;
+	clear:both;
+}
+
+.fs_features li:nth-child(1) .fs_star_icon::before,
+.fs_features li:nth-child(1) .fs_star_icon::after {
+	width:26px;
+	height:27px;
+}
+
+.fs_features li:nth-child(2) .fs_star_icon::before,
+.fs_features li:nth-child(2) .fs_star_icon::after {
+	width:34px;
+	height:33px;
+}
+
+.fs_features li:nth-child(3) .fs_star_icon::before,
+.fs_features li:nth-child(3) .fs_star_icon::after {
+	width:35px;
+	height:33px;
+}
+
+.fs_features li:nth-child(4) .fs_star_icon::before,
+.fs_features li:nth-child(4) .fs_star_icon::after {
+	width:39px;
+	height:38px;
+}
+
+
+.fs_features ul:first-child li .fs_star_icon::before,
+.fs_features ul:first-child li .fs_star_icon::after {
+	right:0;
+	left:auto;	
+}
+
+.fs_features ul:first-child li:nth-child(1) {
+	padding-right:75px;
+	margin:0 0 10px 0;
+}
+
+.fs_features ul:first-child li:nth-child(2) {
+	padding-right:78px;
+	margin:0 0 8px 0;
+}
+
+.fs_features ul:first-child li:nth-child(3) {
+	padding-right:49px;
+	margin:0 0 -18px 0;
+}
+
+
+.fs_features ul:last-child li:nth-child(1) {
+	padding-left:75px;
+	margin:0 0 10px 0;
+}
+
+.fs_features ul:last-child li:nth-child(2) {
+	padding-left:78px;
+	margin:0 0 8px 0;
+}
+
+.fs_features ul:last-child li:nth-child(3) {
+	padding-left:49px;
+	margin:0 0 -18px 0;
+}
+
+.fs_features ul li h3 {
+	position:absolute;
+	color:#fff;
+	display:block;
+	opacity:0;
+	-webkit-transition:opacity 0.3s ease-in-out;
+	transition:opacity 0.3s ease-in-out;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_features ul li .fs_star_icon:hover::before, .fs_features ul li.fs_play .fs_star_icon::before {
+	opacity:0;
+}
+
+.fs_features ul li .fs_star_icon:hover::after, .fs_features ul li.fs_play .fs_star_icon::after {
+	opacity:1;
+}
+
+.fs_features ul li .fs_star_icon:hover + h3, .fs_features ul li.fs_play .fs_star_icon + h3 {
+	opacity:1;
+}
+
+.fs_features ul li h3::after {
+	content:'';
+	position:absolute;
+	top:100%;
+	display:block;
+	width:40px;
+	height:3px;
+	margin-top:2px;
+	background-color:#fff;
+}
+
+.fs_features ul:first-child li h3 {
+	text-align:right;
+}
+
+.fs_features ul li h3::after {
+	margin-top:5px;
+}
+
+.fs_features ul:first-child li h3::after {
+	right:0;
+}
+	
+.fs_features ul:first-child li:nth-child(1) h3 {
+	top:50%;
+	right:110px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:first-child li:nth-child(2) h3 {
+	top:50%;
+	right:125px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:first-child li:nth-child(3) h3 {
+	top:50%;
+	right:100px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:first-child li:nth-child(4) h3 {
+	top:100%;
+	left:50%;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+	margin:20px 0 0 17px;
+	
+}
+
+.fs_features ul:first-child li:nth-child(4) h3::after {
+	right:50%;
+	margin-right:-20px;
+}
+
+.fs_features ul:last-child li h3  {
+	text-align:left;	
+}
+
+.fs_features ul:last-child li:nth-child(1) h3 {
+	top:50%;
+	left:130px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:last-child li:nth-child(2) h3 {
+	top:50%;
+	left:130px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:last-child li:nth-child(3) h3 {
+	top:50%;
+	left:100px;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+}
+
+.fs_features ul:last-child li:nth-child(4) h3 {
+	top:100%;
+	right:50%;
+	-webkit-transform:translateX(50%);
+	transform:translateX(50%);
+	margin:20px 17px 0 0;
+}
+
+.fs_features ul:last-child li:nth-child(4) h3::after {
+	left:50%;
+	margin-left:-20px;	
+}
+
+.fs_title {
+	position:relative;
+	display:block;
+	margin-bottom:35px;	
+}
+
+.fs_title h2{
+	font-size:25px;
+	color:#fff;
+}
+
+.fs_title p {
+	font-family:"iCielSamsungSharpSansMedium", arial;
+	padding:15px 0 0 0;
+	font-size:18px;
+	color:#fff;	
+}
+
+.fs_landing_top .fs_title p {
+	font-family:"iCielSamsungSharpSansBold", arial;	
+	font-size:25px;
+	color:#fff;
+	margin:0;
+	padding:0;
+	text-transform:uppercase;
+}
+
+.fs_landing_top .fs_title p br:nth-child(2) {
+	display:none
+}
+
+.fs_intro .fs_wrapper::before, .fs_intro .fs_wrapper::after {
+	content:'';
+	position:relative;
+	display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	margin:0 -5%;
+}
+
+.fs_intro .fs_bg::after {
+	content:'';
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	height:auto;
+	padding-top:10%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_landing_mash.jpg?$ORIGIN_JPG$) no-repeat center top;
+	background-size:auto 100%;
+}
+
+.fs_intro_bg {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position:center 100%;
+	background-size:cover;
+
+	opacity:0;
+	-webkit-transition:opacity 0.5s ease-in-out;
+	transition:opacity 0.5s ease-in-out;
+}
+
+.fs_intro_bg_pc, .fs_intro_bg_sp{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center 100%;
+}
+
+.fs_intro_bg_sp {
+	display:none;	
+}
+
+
+.fs_intro_bg.show {
+	opacity:1;	
+}
+
+
+.fs_landing {
+	
+	position:relative;
+	top:-10px;
+	display:inline-block;
+	width:90%;
+	height:auto;
+	max-width:1380px;
+	vertical-align:middle;
+}
+
+.fs_landing_top {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin-bottom:30px;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_landing_top .fs_star_icon::after {
+	opacity:1;
+	-webkit-transition:none;
+	transition:none;
+}
+
+.fs_landing_top .fs_star_icon::before {
+	display:none;
+}
+
+.fs_landing_center {
+	
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	
+}
+
+.fs_landing_bottom {
+	
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin-top:20px;
+	
+}
+
+
+.fs_8k_box {
+	position:relative;
+	display:block;
+	width:858px;
+	height:518px;
+	margin:0 auto;
+	background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv.png?$ORIGIN_PNG$') no-repeat center center;
+	background-size:cover;	
+}
+
+.fs_8k_bg {
+	position:absolute;
+	left:4px;
+	top:4px;
+	width:850px;
+	height:479px;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+	
+}
+
+.fs_bg.fs_hide_pc, .fs_8k_bg.fs_hide_pc{
+	display:none;
+}
+
+
+.fs_8k_box_item {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+	-webkit-transition:opacity 0.5s ease-in-out;
+	transition:opacity 0.5s ease-in-out;
+}
+
+.fs_8k_box_item.show {
+	opacity:1;	
+}
+
+.fs_slogan {
+	position:absolute;	
+	left:50%;
+	bottom:46%;
+	text-align:center;
+	width:120%;
+	height:auto;
+	line-height:0;
+	overflow:hidden;
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+}
+
+.fs_slogan.fs_sp_v {
+	display:none;
+}
+
+.fs_slogan img {
+	display:inline-block;
+	width:auto;
+	height:auto;
+	max-width:100%;
+}
+
+.fs_slogan img.fs_hide_pc {
+	display:none;
+}
+
+.fs_slogan_spv, .fs_8k_box_spv {
+	display:none;	
+}
+
+.fs_but {
+	position:relative;
+	display:inline-block;
+	width:auto;
+	height:auto;	
+}
+
+.fs_but a {
+	display:inline-block;
+	width:400px;
+	height:65px;
+	line-height:68px;
+	font-family:"iCielSamsungSharpSansBold", arial;
+	color:#fff;
+	font-size:30px;
+	text-transform:uppercase;
+	letter-spacing:3px;
+	border:1px solid #aba7a4;
+	-webkit-border-radius:40px;
+	border-radius:40px;
+	text-align:center;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	
+}
+
+.fs_but a:hover {
+	background-color:#1428a0;
+}
+
+.fs_intro .fs_but a {
+	width:auto;
+	padding:0 30px;
+	margin:0 5px;
+}
+
+.fs_but a.fs_hide_but {
+	display:none;
+}
+
+.fs_star .fs_but a{
+	width:360px;
+	height:80px;
+	line-height:80px;
+	margin:0 5px;
+}
+
+/*8KTV*/
+.fs_star {
+	background-position:center center;
+}
+
+.fs_star .fs_features {
+	top:50px;
+	-webkit-transform:scale(1.5);
+	transform:scale(1.5);
+}
+
+.fs_tv_spv, .fs_features_title_spv {
+	display:none;
+}
+	
+
+.fs_star .fs_features ul li h3 {
+	font-size:15px;
+}
+
+.fs_star .fs_wrapper::before, 
+.fs_star .fs_wrapper::after {
+	content:'';
+	position:relative;
+	display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	margin:0 -5%;
+}
+
+.fs_star_box {
+	position:relative;
+	display:inline-block;	
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+}
+
+.fs_star_bg {
+	position:relative;
+	left:auto;
+	top:auto;
+	width:1168px;
+	height:705px;
+	background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv.png?$ORIGIN_PNG$') no-repeat center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_star_detail {
+	position:absolute;
+	left:5px;
+	top:5px;
+	width:1158px;
+	height:652px;
+	padding:4.23% 0 0 0;
+}
+
+.fs_star .fs_title {
+	margin-bottom:3.02%
+}
+
+.fs_star .fs_title h2 {
+	font-size:40px;
+}
+
+.fs_star .fs_title h2 br:nth-child(3) {
+	display:none;
+}
+
+.fs_star .fs_landing_bottom {
+	position:relative;
+	left:auto;
+	bottom:auto;	
+}
+
+
+
+/*8KTV COMPARE*/
+.fs_compare .fs_wrapper::before, .fs_compare .fs_wrapper::after,
+.fs_quantum .fs_wrapper::before, .fs_quantum  .fs_wrapper::after,
+.fs_upscaling .fs_wrapper::before, .fs_upscaling  .fs_wrapper::after,
+.fs_extra .fs_wrapper::before, .fs_extra  .fs_wrapper::after {
+	content:'';
+	position:relative;
+	display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	margin:0 -5%;
+}
+
+.fs_compare_box {
+	position:relative;
+	display:inline-block;	
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+}
+
+.fs_compare .fs_title h2, .fs_quantum .fs_title h2, .fs_upscaling .fs_title h2 {
+	font-size:40px;
+}
+
+.fs_compare .fs_title h2 br, .fs_quantum .fs_title h2 br, .fs_upscaling .fs_title h2 br {
+	display:none;
+}
+
+.fs_compare .fs_landing_bottom, .fs_quantum .fs_landing_bottom, .fs_upscaling .fs_landing_bottom {	
+	margin-top:5px;
+}
+
+.fs_compare_detail {
+	position:absolute;
+	left:5px;
+	top:5px;
+	display:block;
+	width:1158px;
+	height:652px;
+	
+}
+
+.fs_compare_container {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+}
+
+.fs_compare_item {
+  position:absolute;
+  width:100%;
+  height:100%;
+  left:0;
+  top:0;
+  overflow:hidden;
+  -webkit-transition:all 0.8s ease-in-out;
+  transition:all 0.8s ease-in-out;
+}
+
+.fs_compare_item h3 {
+	position:absolute;
+	right:25px;
+	top:25px;
+	color:#fff;
+	white-space:nowrap;
+	text-transform:uppercase;
+	font-size:32px;
+	text-shadow:0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.fs_resolution {
+	position:absolute;
+	width:100%;
+	right:25px;
+	bottom:25px;
+	text-align:right;
+	white-space:nowrap;
+}
+
+.fs_resolution_icon {
+	display:inline-block;
+	width:60px;
+	height:60px;
+	vertical-align:top;
+	margin-left:30px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_resolution span {
+	display:inline-block;
+	width:17vw;
+	height:60px;
+	max-width:330px;
+	line-height:60px;
+	background-color:rgba(0,0,0,0.7);
+	font-family:"SamsungOne700", arial;
+	color:#fff;
+	font-size:18px;
+	white-space:nowrap;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	vertical-align:top;
+	text-align:center;
+}
+
+.fs_is_overlay .fs_resolution{
+	right:auto;
+	left:25px;
+	text-align:left;
+}
+
+.fs_is_overlay .fs_resolution_icon{
+	margin-left:auto;
+	margin-right:30px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_4k_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_icon_step {
+	position:absolute;
+	right:100%;
+	top:0;
+	width:79px;
+	height:100%;
+	
+}
+
+.fs_icon_step li {
+	position:absolute;
+	left:0;
+	width:45px;
+	height:44px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon-normal.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+	-webkit-transition:background 0.5s ease-in-out;
+	transition:background 0.5s ease-in-out;
+	
+}
+
+.fs_icon_step li.show {
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_icon_step li:nth-child(1) {
+	top:0;
+}
+
+.fs_icon_step li:nth-child(2) {
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%)
+}
+
+.fs_icon_step li:nth-child(3) {
+	bottom:0;
+}
+
+.fs_brief_step {
+	position:absolute;
+	left:100%;
+	top:0;
+	width:140px;
+	height:100%;
+}
+
+.fs_brief_step li {
+	position:absolute;
+	left:20px;
+	font-size:16px;
+	color:#fff;
+	text-align:left;
+	font-family:"iCielSamsungSharpSansBold", arial;
+	line-height:1.4;
+	opacity:0;
+	-webkit-transition:opacity 0.5s ease-in-out;
+	transition:opacity 0.5s ease-in-out;
+}
+
+.fs_brief_step li.show {
+	opacity:1;
+}
+
+.fs_brief_step li:nth-child(1) {
+	top:0;
+}
+
+.fs_brief_step li:nth-child(2) {
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%)
+}
+
+.fs_brief_step li:nth-child(3) {
+	bottom:0;
+}
+
+.fs_compare_item.fs_is_overlay span {
+	left:70px;
+	right:auto;
+}
+
+.fs_compare_item img {
+  display:block;
+  height:100%;
+  width:auto;
+}
+
+.fs_compare_slider {
+  position:absolute;
+  top:0;
+  z-index:9;
+  width:2px;
+  height:100%;
+  background-color:rgba(255,255,255,1);
+   -webkit-transition:all 0.8s ease-in-out;
+  transition:all 0.8s ease-in-out;
+}
+
+.fs_compare_slider.fs_hide_bg {
+	background-color:rgba(255,255,255,0);
+}
+
+.fs_slider_nav {
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-40px 0 0 -40px;
+	z-index:9;
+	width:80px;
+	height:80px;
+	cursor:pointer;
+}
+
+.fs_slider_prev, .fs_slider_next {
+	content:'';
+	position:absolute;
+	width:40px;
+	height:80px;
+	top:0;
+}
+
+.fs_slider_prev {
+	left:0;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_slider_prev.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_slider_next {
+	right:0;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_slider_next.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_brief_nav {
+	position:absolute;
+	left:80%;
+	bottom:100%;
+	width:270px;
+	height:auto;
+	padding:10px 15px;
+	background-color:rgba(0,0,0,0.8);
+	text-align:left;
+	-webkit-border-radius:5px 5px 5px 0;
+	border-radius:5px 5px 5px 0;
+	-webkit-transform:translateY(-20px);
+	transform:translateY(-20px);
+	z-index:2;
+}
+
+.fs_slider_nav.fs_brief_right .fs_brief_nav {
+	-webkit-border-radius:5px 5px 0 5px;
+	border-radius:5px 5px 0 5px;
+}
+
+
+.fs_upscaling_item .fs_brief_nav {
+	left:94%;
+	bottom:97%;
+	padding:15px;
+	-webkit-transform:translateY(-15px);
+	transform:translateY(-15px);
+	-webkit-transition:opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+	transition:opacity 0.3s ease-in-out 0s, visibility 0s linear 0.3s
+}
+
+.fs_upscaling_item:nth-child(2) .fs_brief_nav {
+	-webkit-transform:translateY(0);
+	transform:translateY(0);
+
+}
+
+.fs_upscaling_item.fs_hide_brief_nav .fs_brief_nav {
+	visibility:hidden;
+	opacity:0;
+}
+
+.fs_brief_nav::before {
+	content:'';
+    position:absolute;
+    left:0px;
+    top:100%;
+    border:29px solid rgba(0,0,0,0.8);
+    border-right:19px solid transparent;
+    border-left:0;
+    border-bottom:0;
+}
+
+.fs_brief_nav::after {
+	content:'';
+    position:absolute;
+    right:0px;
+    top:100%;
+    border:29px solid rgba(0,0,0,0.8);
+    border-left:19px solid transparent;
+    border-right:0;
+    border-bottom:0;
+	opacity:0;
+}
+
+.fs_slider_nav.fs_brief_right .fs_brief_nav, .fs_is_playing .fs_upscaling_item .fs_brief_nav {
+	left:auto;
+	right:80%;
+	-webkit-border-radius:5px 5px 0 5px;
+	border-radius:5px 5px 0 5px;
+	text-align:right;
+}
+
+.fs_slider_nav.fs_brief_right .fs_brief_nav::before, .fs_is_playing .fs_upscaling_item .fs_brief_nav::before {
+	opacity:0;
+}
+
+.fs_slider_nav.fs_brief_right .fs_brief_nav::after, .fs_is_playing .fs_upscaling_item .fs_brief_nav::after {
+	opacity:1;
+}
+
+.fs_compare.fs_go .fs_brief_nav, .fs_upscaling.fs_go .fs_brief_nav {
+	display:none;
+}
+
+
+
+
+
+.fs_brief_nav p {
+	color:#fff;	
+	font-size:16px;
+}
+
+
+.fs_step {
+	position:relative;
+	display:inline-block;
+	width:auto;
+	height:auto;
+	font-size:0;
+}
+
+.fs_step li {
+	position:relative;
+	display:inline-block;
+	margin:0 35px;
+	vertical-align:top;
+}
+
+.fs_step li a {
+	position:relative;
+	display:block;
+	font-size:24px;
+	color:#fff;
+	text-align:left;
+	font-family:"iCielSamsungSharpSansBold", arial;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_step li a.fs_prev {
+	text-align:right;
+}
+
+.fs_step li a.fs_prev::after {
+	content:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_prev.png?$ORIGIN_PNG$);
+	position:relative;
+	display:block;
+	margin-top:15px;
+}
+
+.fs_step li a.fs_next::after {
+	content:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_next.png?$ORIGIN_PNG$);
+	position:relative;
+	display:block;
+	margin-top:15px;
+}
+
+
+/*UPSCALING*/
+.fs_upscaling_container {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	padding:6% 7.6% 6% 7.6%;
+}
+
+.fs_upscaling_detail {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.fs_upscaling_note {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin-bottom:7.6%;
+}
+
+.fs_upscaling_note_spv {
+	display:none;
+}
+
+.fs_upscaling_note h3 {
+	color:#fff;
+	font-size:32px;
+	height:70px;
+}
+
+.fs_upscaling_note h3.fs_8k_note {
+	font-size:32px;
+	text-align:center;
+	display:none;
+}
+
+.fs_upscaling_note.fs_show_note h3 {
+	display:none;
+}
+
+.fs_upscaling_note.fs_show_note h3.fs_8k_note{
+	display:block;
+}
+
+.fs_upscaling_note span {
+	position:relative;
+	display:inline-block;
+	height:1px;
+	width:133px;
+	border:1.5px dashed #fff;
+	vertical-align:middle;
+	margin:0 40px 0 20px;
+}
+
+.fs_upscaling_note span::after {
+	content:'';
+    position:absolute;
+    right:-24px;
+	top:-10px;
+    display:block;
+    border:16px solid #fff;
+    border-top:9px solid transparent;
+    border-bottom:9px solid transparent;
+    border-right:0;
+}
+
+.fs_upscaling_detail::before {
+	content:'';
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding-top:36%;
+}
+
+.fs_upscaling_inner {
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	width:100%;
+	height:100%;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_upscaling_video_thumb {
+	position:relative;
+	display:block;
+	float:left;
+	width:27%;
+	height:100%;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_upscaling_item {
+	position:relative;
+	display:block;
+	width:100%;
+	height:42%;
+	cursor:pointer;
+}
+
+
+.fs_upscaling_item::before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+	z-index:1;
+	opacity:0;
+	-webkit-transition:opacity 0.3s ease-in-out;
+	transition:opacity 0.3s ease-in-out;
+}
+
+.fs_upscaling_item::after {
+	content:'';
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-20px 0 0 -20px;
+	width:40px;
+	height:40px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_icon_video.png?$ORIGIN_PNG$) no-repeat center center;
+	opacity:0;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	z-index:2
+	
+}
+
+.fs_upscaling_wrap {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-position:center center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	overflow:hidden;
+}
+
+.fs_upscaling_item:hover::before, 
+.fs_upscaling_item:hover::after, 
+.fs_upscaling_item.fs_video_checked::before{
+	opacity:1;
+}
+
+.fs_upscaling_item.fs_video_checked .fs_brief_nav {
+	display:none;
+}
+
+.fs_upscaling_item.fs_video_checked::after {
+	display:none;
+}
+	
+.fs_upscaling_item:last-child {
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
+.fs_upscaling_video_box{
+	position:relative;
+	display:block;
+	float:right;
+	width:63%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+}
+
+.fs_upscaling_video {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+
+.fs_upscaling_inner video {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:auto;
+	height:100%;
+	min-width:100%;
+	min-height:100%;
+	-webkit-transform:translateX(-50%) translateY(-50%);
+	transform:translateX(-50%) translateY(-50%);
+}
+
+
+
+.fs_upscaling_detail span {
+	position:absolute;
+	display:inline-block;
+	right:0;
+	top:100%;
+	width:auto;
+	height:auto;
+	margin-top:5px;
+	padding:5px 0;
+	font-family:"SamsungOne700", arial;
+	color:#fff;
+	font-size:14px;
+	line-height:18px;
+	white-space:nowrap;
+	z-index:3;
+}
+
+.fs_hide_video{
+	display:none;
+}
+
+
+/*Quantum*/
+.fs_quantum_container {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	padding:4.5% 0 0 0;
+}
+
+.fs_sound_bg {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+}
+
+.fs_quantum_list {
+	position:relative;
+	display:block;
+	top:9%;
+	width:100%;
+	height:70%;
+}
+
+.fs_quantum_note {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.fs_quantum_note h3 {
+	color:#fff;
+	font-size:27px;
+}
+
+.fs_quantum_item {
+	position:absolute;
+	left:50%;
+	top:0;
+	display:block;
+	width:31%;
+	height:auto;
+	cursor:pointer;
+	-webkit-box-shadow:0 0 30px 3px rgba(255,255,255,0);
+	box-shadow:0 0 30px 3px rgba(255,255,255,0);
+	-webkit-transform:translateX(-50%);
+	transform:translateX(-50%);
+	-webkit-transition:all 0.5s ease-in-out;
+	transition:all 0.5s ease-in-out;
+}
+
+.fs_quantum_item.fs_highlight {
+	-webkit-box-shadow:0 0 30px 3px rgba(255,255,255,1);
+	box-shadow:0 0 30px 3px rgba(255,255,255,1);
+}
+
+.fs_quantum_item.fs_highlight::after {
+	display:none;
+}
+
+.fs_quantum_item_bg{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+}
+
+.fs_quantum_item::before {
+	content:'';
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding-top:116%;
+}
+
+.fs_quantum_item::after {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	display:block;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.5);
+	
+}
+
+.fs_quantum_txt {
+	position:absolute;
+	display:block;
+	width:100%;
+	left:0;
+	bottom:14.5%;
+}
+
+.fs_quantum_txt h3 {
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+}
+
+
+.fs_quantum_nav {
+	display:none;	
+}
+
+.fs_quantum_box {
+	position:relative;
+	display:none;
+	width:100%;
+	height:auto;
+}
+
+.fs_quantum_slider {
+	position:relative;
+	display:block;
+	width:300px;
+	height:352px;
+}
+
+.fs_quantum_item_slide {
+	position:relative;
+	display:block;
+	margin:10px;
+	-webkit-box-shadow:0 0 10px 3px rgba(255,255,255,0);
+	box-shadow:0 0 10px 1px rgba(255,255,255,0);
+}
+
+.fs_quantum_item_slide::before {
+	content:'';
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding-top:116%;
+}
+
+
+
+/*Extra*/
+.fs_share{
+	position:absolute;
+	left:91%;
+	bottom:96%;
+	z-index:1;
+}
+
+.fs_share a {
+	display:block;
+	width:240px;
+	height:60px;
+	padding-left:102px;
+	line-height:60px;
+	border:1px solid #fff;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	color:#fff;
+	font-family:"iCielSamsungSharpSansBold", arial;
+	font-size:24px;
+	text-align:left;
+}
+
+.fs_share a::before {
+	content:'';
+	position:absolute;
+	left:50px;
+	top:15px;
+	width:30px;
+	height:30px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_facebook_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_extra_box {
+	position:relative;
+	display:inline-block;	
+	width:auto;
+	height:auto;
+	vertical-align:middle;
+}
+
+.fs_extra_detail {
+	position:relative;
+	width:1170px;
+	height:auto;
+	margin:0 auto;
+}
+
+.fs_extra .fs_title {
+	margin-bottom:50px;
+}
+
+.fs_extra .fs_title p {
+	padding:0;
+}
+
+.fs_extra_list {
+	position:relative;
+	display:block;
+	width:100%;
+	height:526px;
+}
+
+.fs_extra_item {
+	position:absolute;
+	display:block;
+	width:35%;
+	height:auto;
+	cursor:pointer;
+	-webkit-box-shadow:0 0 30px 3px rgba(255,255,255,0);
+	box-shadow:0 0 30px 3px rgba(255,255,255,0);
+	-webkit-transition:all 0.2s ease-in-out, z-index 0.05s linear 0.22s;	
+	transition:all 0.2s ease-in-out, z-index 0.05s linear 0.22s;
+}
+
+.fs_extra_pic {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding-top:78%;
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size:cover;
+}
+
+.fs_extra_txt {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding:19px 30px 0 68px;
+	background-color:#000;
+	text-align:left;
+	min-height:230px;
+}
+
+.fs_extra_txt h3 {
+	position:relative;
+	font-size:23px;
+	color:#fff;
+	margin-bottom:12px;
+}
+
+.fs_extra_txt h3::before {
+	content:'';
+	position:absolute;
+	left:-54px;
+	top:-5px;
+	width:41px;
+	height:39px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+}
+
+.fs_extra_txt p {
+	font-size:16px;
+	color:#fff;
+	height:110px;
+	overflow:hidden;
+}
+
+.fs_extra_item:nth-child(1) {
+	z-index:1;
+	left:-18.5%;
+	-webkit-transform:scale(0.6);
+	transform:scale(0.6);
+}
+
+.fs_extra_item:nth-child(2) {
+	z-index:2;
+	left:2.5%;
+	-webkit-transform:scale(0.8);
+	transform:scale(0.8);
+}
+
+.fs_extra_item:nth-child(3) {
+	z-index:3;
+	left:32.5%;
+	-webkit-transform:scale(0.94);
+	transform:scale(0.94);
+}
+
+.fs_extra_item:nth-child(4) {
+	z-index:2;
+	left:62.5%;
+	-webkit-transform:scale(0.8);
+	transform:scale(0.8);
+}
+
+.fs_extra_item:nth-child(5) {
+	z-index:1;
+	left:83.5%;
+	-webkit-transform:scale(0.6);
+	transform:scale(0.6);
+}
+
+.fs_extra_item.fs_ex_active {
+	z-index:4;
+	-webkit-box-shadow:0 0 30px 3px rgba(255,255,255,0.5);
+	box-shadow:0 0 30px 3px rgba(255,255,255,0.5);
+	-webkit-transform:scale(1);
+	transform:scale(1);
+	-webkit-transition-delay:0s, 0s;
+	transition-delay:0s, 0s;
+}
+
+.fs_extra_item::after {
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.6);
+	opacity:0;
+	-webkit-transition:opacity 0.3s ease-in-out;
+	transition:opacity 0.3s ease-in-out;
+}
+
+.fs_extra_item.fs_ex_active::after {
+	opacity:0 !important;	
+}
+
+.fs_extra_list:hover .fs_extra_item::after{
+	opacity:1;
+}
+
+
+.fs_extra_slide_box {
+	position:relative;
+	display:none;
+	width:100%;
+	height:auto;
+}
+
+.fs_extra_slider {
+	position:relative;
+	display:block;
+	width:280px;
+	height:auto;
+}
+
+.fs_extra_item_slide {
+	position:relative;
+	display:block;
+	-webkit-box-shadow:0 0 10px 3px rgba(255,255,255,0);
+	box-shadow:0 0 10px 1px rgba(255,255,255,0);
+}
+
+
+
+
+/*Register popup*/
+.fs_form_popup {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,0.9);
+	z-index:10;
+	overflow:hidden;
+	text-align:center;
+	visibility:hidden;
+	opacity:0;
+	-webkit-transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+	transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+}
+
+
+.fs_form_popup.active {
+	opacity:1;
+	visibility:visible;
+	-webkit-transition-delay:0s, 0s;
+	transition-delay:0s, 0s
+}
+
+.fs_form_popup::before, .fs_form_popup::after {
+	content:'';
+	position:relative;
+	display:inline-block;
+	width:0;
+	height:100%;
+	vertical-align:middle;
+	margin:0 -5%;
+}
+
+.fs_form_inner {
+	top:-80px;
+}
+
+.fs_form_inner, .fs_form_popup  .fs_normal_banner{
+	position:relative;
+	display:inline-block;
+	width:90%;
+	height:auto;
+	max-width:1170px;
+	vertical-align:middle;
+}
+
+.fs_form_inner .fs_title h2 {
+	font-size:40px;
+}
+
+.fs_form_box {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding:32px 6%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_form_bg.jpg?$ORIGIN_JPG$) no-repeat center center;
+	background-size:cover;
+	-webkit-border-radius:10px;
+	border-radius:10px;
+	background-color:#fff;
+}
+
+.fs_form_thanks {
+	max-width:600px;
+	margin:0 auto;
+}
+
+.fs_form_box form {
+	position:relative;
+	width:100%;
+	height:auto;
+}
+
+.fs_form_register_hover .fs_group {
+	margin-bottom:0;
+}
+
+.fs_form_box form::after {
+	content:'';
+	position:relative;
+	display:block;
+	width:100%;
+	height:0;
+	clear:both;
+}
+
+.fs_form_logo {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	line-height:0;
+	overflow:hidden;
+	text-align:center;
+	margin-bottom:27px;
+}
+
+.fs_form_logo img {
+	display:inline-block;
+	width:auto;
+	height:auto;
+	max-width:137px;
+}
+
+.fs_step_star, .fs_brief_spv, .fs_nav_indi, .fs_share_sp {
+	display:none;
+}
+
+.fs_form_title {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin-bottom:54px;
+}
+
+.fs_title_sp{
+	display:none;
+}
+
+.fs_form_title h2 {
+	font-size:28px;
+	background-image:linear-gradient(-3deg, rgba(236, 199, 168, 0.64), #8a4525 23%, #e7ab82 49%, #f3cda6 55%, #8a4525 70%, #cfac99);
+	color:#c08f75;
+	line-height:1.36;
+	text-align:center;
+	-webkit-background-clip:text;
+	background-clip:text;
+	-webkit-text-fill-color:transparent;
+	-ms-text-fill-color:none;
+}
+
+.fs_form_title p, .fs_form_thanks p {
+	font-family:"iCielSamsungSharpSansBold", arial;
+	font-size:28px;
+	color:#b99179;
+	line-height:1.36;
+}
+
+.fs_form_thanks p {
+	margin:40px 0 50px 0;	
+}
+
+.fs_show_error input[type="tel"], .fs_show_error input[type="text"], .fs_show_error input[type="password"], .fs_show_error .fs_select_header p {
+	color:#e05252;
+}
+
+
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+
+.fs_show_error input::placeholder {
+	color:#e05252 !important;
+}
+
+.fs_show_error input:-ms-input-placeholder { 
+  color:#e05252 !important;
+}
+
+.fs_error_mess {
+	display:none;
+	font-size:16px;
+	color:#e05252;
+	padding:20px 0 0 0;
+	clear:both;
+}
+
+.fs_error_mess.fs_show_error{
+	display:block;
+}
+
+#errorMsg span {
+	display:none;
+}
+
+#errorMsg span:nth-child(1), #errorMsg span:nth-child(2){
+	display:block;
+	margin:5px 0;
+}
+
+.fs_col{
+	position:relative;
+	display:block;
+	float:left;
+	width:44.6%
+}
+
+.fs_col:nth-child(2) {
+	float:right;	
+}
+
+.fs_group {
+	position:relative;
+	display:block;
+	width:100%;
+	margin-top:48px;
+}
+
+.fs_group.fs_but_group {
+	margin-top:33px;
+}
+
+.fs_group input[type="tel"], 
+.fs_group input[type="text"], 
+.fs_group input[type="password"],
+.fs_group input[type="number"] {
+	position:relative;
+	display:block;
+	width:100%;
+	font-family:"iCielSamsungSharpSansBold";
+	color:#949494;
+	font-size:24px;
+	border:none;
+	height:35px;
+	padding:8px 0 7px 0;
+	border-bottom:1px solid #979797;
+	-webkit-border-radius:0;
+	border-radius:0;
+	-webkit-appearance:none;
+	line-height:35px;
+}
+
+.fs_group input::placeholder {
+	color:#949494;
+}
+
+.fs_group input:-ms-input-placeholder { 
+  color:#949494;
+}
+
+.fs_form_box button, .fs_btn_follow {
+	position:relative;
+	display:inline-block;
+	width:100%;
+	height:50px;
+	max-width:460px;
+	font-family:"iCielSamsungSharpSansBold";
+	color:#b99178;
+	font-size:24px;
+	text-align:center;
+	line-height:50px;
+	border:1px solid #b99179;
+	background:none;
+	-webkit-border-radius:30px;
+	border-radius:30px;
+	cursor:pointer;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.fs_form_box button:hover, .fs_btn_follow:hover {
+	background-color:#b99179;
+	color:#fff;
+}
+
+.fs_btn_follow {
+	max-width:240px;
+	line-height:50px;
+}
+
+.fs_btn_follow span {
+	position:relative;
+	left:20px;	
+}
+
+.fs_btn_follow::before {
+	content:'';
+	position:absolute;
+	left:30px;
+	top:9px;
+	width:30px;
+	height:30px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_facebook_icon_blue.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.fs_btn_follow::after {
+	content:'';
+	position:absolute;
+	left:30px;
+	top:9px;
+	width:30px;
+	height:30px;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_facebook_icon.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+	opacity:0;
+}
+
+.fs_btn_follow:hover::before {
+	opacity:0;
+}
+
+.fs_btn_follow:hover::after {
+	opacity:1;
+}
+
+.fs_select {
+	position:relative;
+	display:block;
+	width:100%;
+	height:35px;
+}
+
+
+.fs_lev_5 {
+	z-index:7;
+}
+
+.fs_lev_4 {
+	z-index:6;
+}
+
+.fs_lev_3 {
+	z-index:5;
+}
+
+.fs_lev_2 {
+	z-index:4;
+}
+
+
+.fs_select_header {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	border-bottom:1px solid #979797;
+	cursor:pointer;
+	z-index:2;
+}
+
+.fs_select_header::after{
+	content:'';
+	position:absolute;
+	right:0;
+	top:5px;
+	display:block;
+	width:15px;
+	height:15px;
+	pointer-events:none;
+	border-right:3px solid #949494;
+	border-bottom:3px solid #949494;
+	-webkit-transform:rotate(45deg);
+	transform:rotate(45deg);
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.fs_select_header p {
+	font-family:"iCielSamsungSharpSansBold";
+	color:#949494;
+	font-size:24px;
+	text-align:left;
+	line-height:34px;
+	font-weight:normal;
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+
+.fs_select_box{
+	position:absolute;
+	top:0;
+	left:0;
+	display:block;
+	width:100%;
+	height:auto;
+	padding-top:34px;
+	visibility:hidden;
+	opacity:0;
+	transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+}
+
+.fs_select_box ul{
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	max-height:180px;
+	text-align:left;
+	padding:15px;
+	box-shadow:0 0px 8px rgba(3, 3, 3, 0.2);
+	background-color:#fff;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.fs_select_box li {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin:0 auto 1px auto;
+	background-color:#fff;
+	padding:10px;
+	font-family:"SamsungOne700", arial;
+	font-size:20px;
+	font-weight:normal;
+	color:#949494;
+	text-transform:uppercase;
+	cursor:pointer;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out
+}
+
+.fs_select_box li:not(.selected):hover, .fs_select_box li.selected{
+	background-color:#ddd;
+}
+
+.fs_select_box li.selected::after{
+	content:'';
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;height:100%
+}
+
+.fs_select_header.active + .fs_select_box{
+	opacity:1;
+	visibility:visible;
+	-webkit-transition-delay:0s, 0s;
+	transition-delay:0s, 0s
+}
+
+.fs_select_header.active::after{
+	-webkit-transform:rotate(-135deg);
+	transform:rotate(-135deg)
+}
+
+.fs_select_txt {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	padding:5px 10px;
+	background-color:#f2f2f2;
+}
+
+.fs_select_txt input {
+	border:none !important;	
+	background-color:#f2f2f2 !important;
+}
+
+
+.fs_banner {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+	margin:45px 0 0 0;
+	-webkit-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+
+.fs_banner a {
+	display:block;
+	line-height:0;
+	overflow:hidden;
+}
+
+.fs_banner img {
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+.fs_banner img.fs_sp_v {
+	display:none;	
+}
+
+.fs_normal_banner {
+	position:relative;
+	display:block;
+	width:100%;
+	height:auto;
+}
+
+
+.fs_form_popup .fs_banner{
+	position:absolute;
+	left:0;
+	bottom:20px;
+	margin:0;
+	z-index:-1;
+}
+
+
+.fs_form_popup .fs_normal_banner {
+	width:90%;
+	max-width:1170px;
+	margin:0 auto;
+}
+
+.fs_form_popup .fs_banner img.spPic {
+	display:none;
+}
+
+.fs_indicator {
+	display:none;
+	position:absolute;
+	right:50px;
+	top:50%;
+	-webkit-transform:translateY(-50%);
+	transform:translateY(-50%);
+	z-index:11;
+}
+
+.fs_indicator.fs_show_indicator {
+	display:block;
+}
+
+.fs_indicator ul {
+	display:inline-block;
+	width:150px;
+	height:auto;	
+}
+
+.fs_indicator ul li {
+	display:block;
+	text-align:right;	
+	margin:20px 0;
+}
+
+.fs_indicator_txt {
+	display:inline-block;
+	vertical-align:middle;
+	font-size:12px;
+	line-height:22px;
+	font-family:"iCielSamsungSharpSansBold", arial;
+	vertical-align:middle;
+	color:#fff;
+	margin-right:19px;
+	opacity:0;
+	-webkit-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+
+.fs_indicator_icon {
+	position:relative;
+	display:inline-block;
+	width:18px;
+	height:18px;
+	vertical-align:middle;
+}
+
+.fs_indicator_icon::before {
+	content:'';
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	border:1px solid #979797;
+	-webkit-border-radius:50%;
+	border-radius:50%;
+}
+
+.fs_indicator_icon::after {
+	content:'';
+	position:absolute;
+	display:block;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background-image:radial-gradient(circle at 50% 50%, #8b572a, #df9468 32%, #e7ab82 49%, #f3cda6 68%, #8a4525 100%, #e19b75);
+	-webkit-border-radius:50%;
+	border-radius:50%;	
+	opacity:0;
+}
+
+.fs_indicator_active {
+	cursor:pointer;
+}
+
+.fs_indicator_active .fs_indicator_icon::after, .fs_indicator_active:hover .fs_indicator_txt{
+	opacity:1;
+}
+
+.fs_indicator_active .fs_indicator_icon::before {
+	opacity:0;
+}
+
+
+
+
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none) {
+ .fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		line-height:0;
+ }
+ 
+}
+
+
+
+/*Slider*/
+.fs_swiper-slide,.fs_swiper-wrapper{height:100%;position:relative;width:100%}.fs_swiper-container{margin:0 auto;position:relative;overflow:hidden;list-style:none;padding:0;z-index:1}.fs_swiper-container-no-flexbox .fs_swiper-slide{float:left}.fs_swiper-container-vertical>.fs_swiper-wrapper{-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column}.fs_swiper-wrapper{z-index:1;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform;-webkit-box-sizing:content-box;box-sizing:content-box}.fs_swiper-container-android .fs_swiper-slide,.fs_swiper-wrapper{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}.fs_swiper-container-multirow>.fs_swiper-wrapper{-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap}.fs_swiper-container-free-mode>.fs_swiper-wrapper{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out;margin:0 auto}.fs_swiper-slide{-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;-webkit-transition-property:-webkit-transform;-o-transition-property:transform;transition-property:transform;transition-property:transform,-webkit-transform}.fs_swiper-slide-invisible-blank{visibility:hidden}.fs_swiper-container-autoheight,.fs_swiper-container-autoheight .fs_swiper-slide{height:auto}.fs_swiper-container-autoheight .fs_swiper-wrapper{-webkit-box-align:start;-webkit-align-items:flex-start;-ms-flex-align:start;align-items:flex-start;-webkit-transition-property:height,-webkit-transform;-o-transition-property:transform,height;transition-property:transform,height;transition-property:transform,height,-webkit-transform}.fs_swiper-container-3d{-webkit-perspective:1200px;perspective:1200px}.fs_swiper-container-3d .fs_swiper-slide,.fs_swiper-container-3d .fs_swiper-slide-shadow-bottom,.fs_swiper-container-3d .fs_swiper-slide-shadow-left,.fs_swiper-container-3d .fs_swiper-slide-shadow-right,.fs_swiper-container-3d .fs_swiper-slide-shadow-top,.fs_swiper-container-3d .fs_swiper-wrapper,.fs_swiper-container-3d .swiper-cube-shadow{-webkit-transform-style:preserve-3d;transform-style:preserve-3d}.fs_swiper-container-3d .fs_swiper-slide-shadow-bottom,.fs_swiper-container-3d .fs_swiper-slide-shadow-left,.fs_swiper-container-3d .fs_swiper-slide-shadow-right,.fs_swiper-container-3d .fs_swiper-slide-shadow-top{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:10}.fs_swiper-container-3d .fs_swiper-slide-shadow-left{background-image:-webkit-gradient(linear,right top,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(right,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to left,rgba(0,0,0,.5),rgba(0,0,0,0))}.fs_swiper-container-3d .fs_swiper-slide-shadow-right{background-image:-webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(left,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to right,rgba(0,0,0,.5),rgba(0,0,0,0))}.fs_swiper-container-3d .fs_swiper-slide-shadow-top{background-image:-webkit-gradient(linear,left bottom,left top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(bottom,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to top,rgba(0,0,0,.5),rgba(0,0,0,0))}.fs_swiper-container-3d .fs_swiper-slide-shadow-bottom{background-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,.5)),to(rgba(0,0,0,0)));background-image:-webkit-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:-o-linear-gradient(top,rgba(0,0,0,.5),rgba(0,0,0,0));background-image:linear-gradient(to bottom,rgba(0,0,0,.5),rgba(0,0,0,0))}.fs_swiper-container-wp8-horizontal,.fs_swiper-container-wp8-horizontal>.fs_swiper-wrapper{-ms-touch-action:pan-y;touch-action:pan-y}.fs_swiper-container-wp8-vertical,.fs_swiper-container-wp8-vertical>.fs_swiper-wrapper{-ms-touch-action:pan-x;touch-action:pan-x}.fs_swiper-button-next,.fs_swiper-button-prev{position:absolute;top:50%;width:27px;height:44px;margin-top:-22px;z-index:10;cursor:pointer;background-size:27px 44px;background-position:center;background-repeat:no-repeat}.fs_swiper-button-next.swiper-button-disabled,.fs_swiper-button-prev.swiper-button-disabled{opacity:.35;cursor:auto;pointer-events:none}.fs_swiper-button-prev,.fs_swiper-container-rtl .fs_swiper-button-next{left:20px;right:auto}.fs_swiper-button-next,.fs_swiper-container-rtl .fs_swiper-button-prev{right:20px;left:auto}.fs_swiper-button-prev.swiper-button-white,.fs_swiper-container-rtl .fs_swiper-button-next.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.fs_swiper-button-next.swiper-button-white,.fs_swiper-container-rtl .fs_swiper-button-prev.swiper-button-white{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E")}.fs_swiper-button-prev.swiper-button-black,.fs_swiper-container-rtl .fs_swiper-button-next.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.fs_swiper-button-next.swiper-button-black,.fs_swiper-container-rtl .fs_swiper-button-prev.swiper-button-black{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E")}.fs_swiper-button-lock{display:none}.fs_swiper-pagination{position:absolute;text-align:center;-webkit-transition:.3s opacity;-o-transition:.3s opacity;transition:.3s opacity;-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0);z-index:10}.fs_swiper-pagination.fs_swiper-pagination-hidden{opacity:0}.fs_swiper-container-horizontal>.fs_swiper-pagination-bullets,.fs_swiper-pagination-custom,.fs_swiper-pagination-fraction{bottom:30px;left:0;width:100%}.fs_swiper-pagination-bullets-dynamic{overflow:hidden;font-size:0}.fs_swiper-container-cube,.fs_swiper-container-flip{overflow:visible}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33);position:relative}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active,.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active-main{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active-prev{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active-prev-prev{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active-next{-webkit-transform:scale(.66);-ms-transform:scale(.66);transform:scale(.66)}.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet-active-next-next{-webkit-transform:scale(.33);-ms-transform:scale(.33);transform:scale(.33)}.fs_swiper-pagination-bullet{width:12px;height:12px;display:inline-block;border-radius:100%;background:#029fcf;opacity:.5}button.fs_swiper-pagination-bullet{border:none;margin:0;padding:0;-webkit-box-shadow:none;box-shadow:none;-webkit-appearance:none;-moz-appearance:none;appearance:none}.fs_swiper-pagination-clickable .fs_swiper-pagination-bullet{cursor:pointer}.fs_swiper-scrollbar-cursor-drag,.fs_swiper-slide-zoomed{cursor:move}.fs_swiper-pagination-bullet-active{opacity:1;background:#029fcf}.fs_swiper-container-vertical>.fs_swiper-pagination-bullets{right:10px;top:50%;-webkit-transform:translate3d(0,-50%,0);transform:translate3d(0,-50%,0)}.fs_swiper-container-vertical>.fs_swiper-pagination-bullets .fs_swiper-pagination-bullet{margin:6px 0;display:block}.fs_swiper-container-vertical>.fs_swiper-pagination-bullets.fs_swiper-pagination-bullets-dynamic{top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:8px}.fs_swiper-container-vertical>.fs_swiper-pagination-bullets.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet{display:inline-block;-webkit-transition:.2s top,.2s -webkit-transform;-o-transition:.2s transform,.2s top;transition:.2s transform,.2s top;transition:.2s transform,.2s top,.2s -webkit-transform}.fs_swiper-pagination-lock,.fs_swiper-scrollbar-lock{display:none}.fs_swiper-container-horizontal>.fs_swiper-pagination-bullets .fs_swiper-pagination-bullet{margin:0 4px}.fs_swiper-container-horizontal>.fs_swiper-pagination-bullets.fs_swiper-pagination-bullets-dynamic{left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%);white-space:nowrap}.fs_swiper-container-horizontal>.fs_swiper-pagination-bullets.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet{-webkit-transition:.2s left,.2s -webkit-transform;-o-transition:.2s transform,.2s left;transition:.2s transform,.2s left;transition:.2s transform,.2s left,.2s -webkit-transform}.fs_swiper-container-horizontal.fs_swiper-container-rtl>.fs_swiper-pagination-bullets-dynamic .fs_swiper-pagination-bullet{-webkit-transition:.2s right,.2s -webkit-transform;-o-transition:.2s transform,.2s right;transition:.2s transform,.2s right;transition:.2s transform,.2s right,.2s -webkit-transform}.fs_swiper-pagination-progressbar{background:rgba(0,0,0,.25);position:absolute}.fs_swiper-pagination-progressbar .fs_swiper-pagination-progressbar-fill{background:#007aff;position:absolute;left:0;top:0;width:100%;height:100%;-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);-webkit-transform-origin:left top;-ms-transform-origin:left top;transform-origin:left top}.fs_swiper-container-rtl .fs_swiper-pagination-progressbar .fs_swiper-pagination-progressbar-fill{-webkit-transform-origin:right top;-ms-transform-origin:right top;transform-origin:right top}.fs_swiper-container-horizontal>.fs_swiper-pagination-progressbar,.fs_swiper-container-vertical>.fs_swiper-pagination-progressbar.fs_swiper-pagination-progressbar-opposite{width:100%;height:4px;left:0;top:0}.fs_swiper-container-horizontal>.fs_swiper-pagination-progressbar.fs_swiper-pagination-progressbar-opposite,.fs_swiper-container-vertical>.fs_swiper-pagination-progressbar{width:4px;height:100%;left:0;top:0}.fs_swiper-pagination-white .fs_swiper-pagination-bullet-active{background:#fff}.fs_swiper-pagination-progressbar.fs_swiper-pagination-white{background:rgba(255,255,255,.25)}.fs_swiper-pagination-progressbar.fs_swiper-pagination-white .fs_swiper-pagination-progressbar-fill{background:#fff}.fs_swiper-pagination-black .fs_swiper-pagination-bullet-active{background:#000}.fs_swiper-pagination-progressbar.fs_swiper-pagination-black{background:rgba(0,0,0,.25)}.fs_swiper-pagination-progressbar.fs_swiper-pagination-black .fs_swiper-pagination-progressbar-fill{background:#000}.fs_swiper-scrollbar{border-radius:10px;position:relative;-ms-touch-action:none;background:rgba(0,0,0,.1)}.fs_swiper-container-horizontal>.fs_swiper-scrollbar{position:absolute;left:1%;bottom:3px;z-index:50;height:5px;width:98%}.fs_swiper-container-vertical>.fs_swiper-scrollbar{position:absolute;right:3px;top:1%;z-index:50;width:5px;height:98%}.fs_swiper-scrollbar-drag{height:100%;width:100%;position:relative;background:rgba(0,0,0,.5);border-radius:10px;left:0;top:0}.fs_swiper-zoom-container{width:100%;height:100%;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;text-align:center}.fs_swiper-zoom-container>canvas,.fs_swiper-zoom-container>img,.fs_swiper-zoom-container>svg{max-width:100%;max-height:100%;-o-object-fit:contain;object-fit:contain}.fs_swiper-lazy-preloader{width:42px;height:42px;position:absolute;left:50%;top:50%;margin-left:-21px;margin-top:-21px;z-index:10;-webkit-transform-origin:50%;-ms-transform-origin:50%;transform-origin:50%;-webkit-animation:swiper-preloader-spin 1s steps(12,end) infinite;animation:swiper-preloader-spin 1s steps(12,end) infinite}.fs_swiper-lazy-preloader:after{display:block;content:'';width:100%;height:100%;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%236c6c6c'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");background-position:50%;background-size:100%;background-repeat:no-repeat}.fs_swiper-lazy-preloader-white:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D'0%200%20120%20120'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20xmlns%3Axlink%3D'http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink'%3E%3Cdefs%3E%3Cline%20id%3D'l'%20x1%3D'60'%20x2%3D'60'%20y1%3D'7'%20y2%3D'27'%20stroke%3D'%23fff'%20stroke-width%3D'11'%20stroke-linecap%3D'round'%2F%3E%3C%2Fdefs%3E%3Cg%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(30%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(60%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(90%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(120%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.27'%20transform%3D'rotate(150%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.37'%20transform%3D'rotate(180%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.46'%20transform%3D'rotate(210%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.56'%20transform%3D'rotate(240%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.66'%20transform%3D'rotate(270%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.75'%20transform%3D'rotate(300%2060%2C60)'%2F%3E%3Cuse%20xlink%3Ahref%3D'%23l'%20opacity%3D'.85'%20transform%3D'rotate(330%2060%2C60)'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E")}@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fs_swiper-container .swiper-notification{position:absolute;left:0;top:0;pointer-events:none;opacity:0;z-index:-1000}.fs_swiper-container-fade.fs_swiper-container-free-mode .fs_swiper-slide{-webkit-transition-timing-function:ease-out;-o-transition-timing-function:ease-out;transition-timing-function:ease-out}.fs_swiper-container-fade .fs_swiper-slide{pointer-events:none;-webkit-transition-property:opacity;-o-transition-property:opacity;transition-property:opacity}.fs_swiper-container-fade .fs_swiper-slide .fs_swiper-slide{pointer-events:none}.fs_swiper-container-fade .fs_swiper-slide-active,.fs_swiper-container-fade .fs_swiper-slide-active .fs_swiper-slide-active{pointer-events:auto}.fs_swiper-container-cube .fs_swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1;visibility:hidden;-webkit-transform-origin:0 0;-ms-transform-origin:0 0;transform-origin:0 0;width:100%;height:100%}.fs_swiper-container-cube .fs_swiper-slide .fs_swiper-slide{pointer-events:none}.fs_swiper-container-cube.fs_swiper-container-rtl .fs_swiper-slide{-webkit-transform-origin:100% 0;-ms-transform-origin:100% 0;transform-origin:100% 0}.fs_swiper-container-cube .fs_swiper-slide-active,.fs_swiper-container-cube .fs_swiper-slide-active .fs_swiper-slide-active{pointer-events:auto}.fs_swiper-container-cube .fs_swiper-slide-active,.fs_swiper-container-cube .fs_swiper-slide-next,.fs_swiper-container-cube .fs_swiper-slide-next+.fs_swiper-slide,.fs_swiper-container-cube .fs_swiper-slide-prev{pointer-events:auto;visibility:visible}.fs_swiper-container-cube .fs_swiper-slide-shadow-bottom,.fs_swiper-container-cube .fs_swiper-slide-shadow-left,.fs_swiper-container-cube .fs_swiper-slide-shadow-right,.fs_swiper-container-cube .fs_swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.fs_swiper-container-cube .swiper-cube-shadow{position:absolute;left:0;bottom:0;width:100%;height:100%;background:#000;opacity:.6;-webkit-filter:blur(50px);filter:blur(50px);z-index:0}.fs_swiper-container-flip .fs_swiper-slide{pointer-events:none;-webkit-backface-visibility:hidden;backface-visibility:hidden;z-index:1}.fs_swiper-container-flip .fs_swiper-slide .fs_swiper-slide{pointer-events:none}.fs_swiper-container-flip .fs_swiper-slide-active,.fs_swiper-container-flip .fs_swiper-slide-active .fs_swiper-slide-active{pointer-events:auto}.fs_swiper-container-flip .fs_swiper-slide-shadow-bottom,.fs_swiper-container-flip .fs_swiper-slide-shadow-left,.fs_swiper-container-flip .fs_swiper-slide-shadow-right,.fs_swiper-container-flip .fs_swiper-slide-shadow-top{z-index:0;-webkit-backface-visibility:hidden;backface-visibility:hidden}.fs_swiper-container-coverflow .fs_swiper-wrapper{-ms-perspective:1200px}
+
+@media screen and (min-width:1101px) and (max-height:970px){
+	
+	.fs_landing, .fs_star_box, .fs_compare_box, .fs_extra_box {
+		-webkit-transform:scale(0.84);
+		transform:scale(0.84);
+	}
+	
+	.fs_landing, .fs_compare_box {
+		top:-20px;
+	}
+	
+	.fs_extra .fs_title {
+		margin-bottom:30px;
+	}
+	
+	.fs_extra .fs_banner {
+		margin-top:30px;
+	}
+	
+	/*form*/
+	.fs_form_inner, .fs_form_popup  .fs_normal_banner {
+		max-width:982px;
+	}
+	
+	.fs_form_inner .fs_title {
+		margin-bottom:20px;
+	}
+	
+	.fs_form_inner .fs_title h2 {
+		font-size:34px;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:20px;
+	}
+	
+	.fs_form_title {
+		margin-bottom:25px;
+	}
+	
+	.fs_form_logo img {
+		max-width:115px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p{
+		font-size:24px;
+	}
+	
+	.fs_form_thanks p {
+		margin:40px 0;	
+	}
+	
+	.fs_group {
+		margin-top:26px;
+	}
+	
+	.fs_select_header p, .fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		font-size:22px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:15px;	
+	}
+	
+	.fs_form_box button {
+		font-size:22px;
+		height:46px;
+		line-height:46px;
+	}
+	
+}
+
+@media screen and (min-width:1101px) and (max-height:920px){
+	
+	.fs_landing, .fs_star_box, .fs_compare_box, .fs_extra_box {
+		-webkit-transform:scale(0.8);
+		transform:scale(0.8);
+	}
+	
+	.fs_landing, .fs_compare_box {
+			top:-40px;
+	}
+	
+	/*form*/
+	 .fs_form_inner, .fs_form_popup  .fs_normal_banner {
+		max-width:936px;
+	 }
+	
+	.fs_form_inner .fs_title {
+		margin-bottom:25px;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:20px;
+	}
+	
+	.fs_form_logo img {
+		max-width:109px;
+	}
+	
+	.fs_form_title  {
+		margin-bottom:30px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:22px;
+	}
+	
+	.fs_group {
+		margin-top:34px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:23px;	
+	}
+	
+	.fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		font-size:20px;
+	}
+	
+	.fs_form_box button {
+		font-size:20px;
+	}
+	
+	.fs_select_header p {
+		font-size:20px;
+	}
+		
+	.fs_select_box li {
+		font-size:18px;
+	}	
+	
+}
+
+@media screen and (min-width:1101px) and (max-height:860px){
+	
+	.fs_landing {
+		top:-90px;
+		-webkit-transform:scale(0.7);
+		transform:scale(0.7);
+	}
+	
+	.fs_star_box, .fs_compare_box {
+		-webkit-transform:scale(0.65);
+		transform:scale(0.65);
+	}
+	
+	.fs_extra_box {
+		top:-60px;
+		-webkit-transform:scale(0.7);
+		transform:scale(0.7);
+	}
+	
+	.fs_landing_top {
+		margin-bottom:20px;
+	}
+	
+	.fs_landing_top .fs_title {
+		margin-bottom:0;
+	}
+	
+	.fs_landing_top .fs_features {
+		margin-bottom:20px;
+	}
+	
+	.fs_star_box {
+		top:-60px;
+	}
+	
+	.fs_compare_box {
+		top:-120px;
+	}
+	
+	
+	/*form*/
+	.fs_form_inner, .fs_form_popup  .fs_normal_banner  {
+		max-width:760px;
+	}
+	
+	.fs_form_popup .fs_banner {
+		bottom:20px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:20px;
+	}
+	
+}
+
+@media screen and (min-width:1101px) and (max-height:780px){
+	
+	.fs_landing {
+		top:-100px;
+		-webkit-transform:scale(0.65);
+		transform:scale(0.65);
+	}
+	
+	.fs_star_box, .fs_compare_box {
+		-webkit-transform:scale(0.6);
+		transform:scale(0.6);
+	}
+	
+	.fs_compare_box {
+		top:-130px;
+	}
+	
+	
+	/*FORM*/
+	.fs_form_inner {
+		top:-40px;
+	}
+	
+	.fs_form_inner, .fs_form_popup  .fs_normal_banner {
+		max-width:702px;
+	}
+	
+	.fs_form_inner .fs_title {
+		margin-bottom:20px;
+	}
+	
+	.fs_form_inner .fs_title h2 {
+		font-size:24px;
+	}
+	
+	.fs_form_box {
+		padding:20px 6%;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:15px;
+	}
+	
+	.fs_form_logo img {
+		max-width:82px;
+	}
+	
+	.fs_form_title {
+		margin-bottom:7px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:17px;
+	}
+	
+	.fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_select_header p, .fs_group input[type="number"] {
+		font-size:15px;
+	}
+	
+	.fs_group {
+		margin-top:16px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:11px;	
+	}
+	
+	.fs_form_box button {
+		height:40px;
+		line-height:40px;
+		font-size:17px;
+	}
+	 
+	.fs_select_header::after {
+		width:10px;
+		height:10px;
+		border-right:2px solid #949494;
+		border-bottom:2px solid #949494;
+	}
+	
+	.fs_select_box ul {
+		padding:10px;
+	}
+	
+	.fs_select_box li {
+		font-size:15px;
+		padding:5px;
+	}
+	
+	.fs_star .fs_features ul li h3 {
+		font-size:14px;
+	}
+	 
+}	
+	
+@media screen and (min-width:1101px) and (max-height:740px){
+	
+	.fs_landing {
+		-webkit-transform:scale(0.6);
+		transform:scale(0.6);
+	}
+	
+	.fs_extra .fs_title {
+		margin-bottom:15px;
+	}
+	
+	.fs_extra .fs_banner {
+		margin-top:15px;
+	}
+	
+	.fs_form_inner {
+		top:-50px;
+	}
+	
+	
+	.fs_extra_box {
+		top:-70px;
+	}
+	
+}
+
+@media screen and (min-width:1101px) and (max-height:660px){
+	
+	.fs_landing {
+		top:-170px;
+		-webkit-transform:scale(0.55);
+		transform:scale(0.55);
+	}
+	
+	.fs_star_box, .fs_compare_box {
+		-webkit-transform:scale(0.52);
+		transform:scale(0.52);
+	}
+	
+	.fs_star_box {
+		top:-130px;
+	}
+	
+	.fs_compare_box {
+		top:-190px;
+	}
+	
+	.fs_extra_box {
+		top:-50px;
+		-webkit-transform:scale(0.6);
+		transform:scale(0.6);
+	}
+	
+	.fs_share  {
+		bottom:95%;
+	}
+	
+	
+	
+	/*form*/
+	.fs_form_inner, .fs_form_popup  .fs_normal_banner {
+		max-width:600px;
+	}
+	
+	.fs_form_inner .fs_title {
+		margin-bottom:12px;
+	}
+	
+	.fs_form_inner .fs_title h2 {
+		font-size:20px;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:12px;
+	}
+	
+	.fs_form_logo img {
+		max-width:72px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:14px;
+	}
+	
+	.fs_form_box {
+		padding:15px 6%;
+	}
+	
+	.fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		height:30px;
+		line-height:30px;
+		font-size:13px;
+		padding:4px 0 0 0;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:12px;	
+	}
+	
+	.fs_form_box button {
+		height:34px;
+		line-height:34px;
+		font-size:14px;
+	}
+	
+	.fs_select, .fs_select_header {
+		height:30px;
+	}
+	
+	.fs_select_header p  {
+		font-size:13px;
+		line-height:30px;
+	}
+	
+	.fs_select_box {
+		padding-top:30px;
+	}
+	
+	.fs_select_box li {
+		font-size:13px;
+	}
+	
+	.fs_select_header::after {
+		width:8px;
+		height:8px;
+		top:8px;
+	}
+
+}
+
+@media screen and (min-width:1101px) and (max-height:590px){
+	
+	.fs_compare_box  {
+		top:-200px;
+	}
+	
+	.fs_extra .fs_title {
+		margin-bottom:10px;
+	}
+	
+	.fs_extra .fs_banner {
+		margin-top:0;
+	}
+	
+	.fs_landing_bottom  {
+		margin-top:0
+	}
+	
+	
+}
+
+
+@media screen and (min-width:1101px) and (max-width:1300px) and (max-height:820px){
+	.fs_form_inner {
+		top:-50px;	
+	}
+	
+	.fs_form_title {
+		margin-bottom:0;	
+	}
+	
+	.fs_group {
+		margin-top:26px;	
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:16px;
+	}
+}
+
+
+
+/*Landscape mobile*/
+@media screen and (max-width:1100px) {
+	
+	.fs_indicator, .fs_indicator.fs_show_indicator {
+		display:none;
+	}
+	
+	.fs_main {
+		opacity:1;
+	}
+		
+	.fs_slogan img.fs_hide_pc {
+		display:inline-block;
+	}
+	
+	.fs_slogan img.fs_hide_sp {
+		display:none;
+	}
+	
+	.fs_brief_nav, .fs_upscaling_item .fs_brief_nav {
+		width:150px;
+		-webkit-transform:translateY(-10px);
+		transform:translateY(-10px);
+	}
+	
+	.fs_brief_nav p {
+		font-size:10px;
+	}
+	
+	.fs_upscaling_item .fs_brief_nav {
+		width:160px;
+		padding:7px 10px;
+		-webkit-transform:translateY(-10px);
+		transform:translateY(-10px);
+	}
+	
+	.fs_brief_nav::before {
+		border:16px solid rgba(0,0,0,0.8);
+		border-right:14px solid transparent;
+		border-left:0;
+		border-bottom:0;
+	}
+	.fs_brief_nav::after {
+		border:16px solid rgba(0,0,0,0.8);
+		border-left:14px solid transparent;
+		border-right:0;
+		border-bottom:0;
+	}
+	
+	
+	/*Video share*/
+	.fs_upscaling_item video, 
+	.fs_upscaling_video_box video {
+		opacity:0;
+	}
+	
+	.fs_upscaling_item.fs_video_checked video, 
+	.fs_is_playing .fs_upscaling_video_box video {
+		opacity:1;
+	}
+	
+	
+	/*form*/
+	.fs_select_box ul {
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+	}
+	
+	.fs_form_box button, .fs_btn_follow {
+		-webkit-transition:none;
+		transition:none;	
+	}
+	
+	.fs_form_box button:hover, .fs_btn_follow:hover {
+		background-color:#fff;
+		color:#b99179;
+	}
+		
+	.fs_btn_follow::before {
+		-webkit-transition:none;
+		transition:none;
+		width:24px;
+		height:24px;
+		top:7px;
+		left:25px;
+	}
+	
+	.fs_btn_follow span {
+		left:15px;	
+	}
+	
+	.fs_btn_follow::after {
+		-webkit-transition:none;
+		transition:none;
+		display:none;
+	}
+	
+	.fs_btn_follow:hover::before {
+		opacity:1;
+	}
+	
+	.fs_btn_follow {
+		width:190px;
+		height:40px;
+		line-height:40px;
+		font-size:18px;	
+	}
+	
+	.fs_slider_nav {
+		width:54px;
+		height:54px;
+		margin:-27px 0 0 -27px;
+	}
+	
+	.fs_slider_next, .fs_slider_prev {
+		width:27px;
+		height:53px;
+	}
+	
+	.fs_slider_prev {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_slider_prev_sp.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:cover;
+	}
+	
+	.fs_slider_next {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_slider_next_sp.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:cover;
+	}
+	
+}
+
+
+@media screen and (max-width:1100px) and (orientation :landscape) {
+	
+	/*Landing page*/
+	.fs_bg.fs_hide_sp, .fs_8k_bg.fs_hide_sp, .fs_intro_bg_pc {
+		display:none;
+	}
+	
+	.fs_bg.fs_hide_pc, .fs_8k_bg.fs_hide_pc {
+		display:block;
+	}
+	
+	.fs_8k_bg.fs_hide_pc.fs_sp_v  {
+		display:none;
+	}
+	
+	.fs_intro_bg_sp {
+		display:block;
+	}
+	
+	.fs_intro_bg_sp.fs_sp_v {
+		display:none;
+	}
+	
+	.fs_slogan img.fs_hide_pc {
+		display:inline-block;
+	}
+	
+	.fs_slogan img.fs_hide_pc.fs_sp_v {
+		display:none;
+	}
+	
+	
+	
+	.fs_star .fs_features ul li h3 {
+		font-size:14px;
+	}
+	
+	
+}
+
+@media screen and (max-width:1100px) and (orientation :portrait){
+	
+	.fs_form_popup .fs_banner img.spPic {
+		display:none;
+	}
+	
+	.fs_form_popup.show_thanks .fs_banner {
+		display:block;
+		bottom:0;
+		z-index:1;
+	}
+	
+	.fs_form_popup.show_thanks .fs_banner img.spPic{
+		display:block;
+	}
+	
+	.fs_form_popup.show_thanks .fs_banner img.cmPic{
+		display:none;
+	}
+}
+
+
+@media screen and (max-width:1100px) and (orientation :landscape){
+
+	.fs_main {
+		opacity:1;
+	}
+	
+	/*Logo*/
+	.fs_main_logo {
+		left:20px;
+		top:20px;
+	}
+	
+	.fs_main_logo img {
+		max-width:120px;	
+	}
+	
+	.fs_intro .fs_wrapper::before, .fs_intro  .fs_wrapper::after {
+		content:'';
+		position:relative;
+		display:inline-block;
+		width:0;
+		height:100%;
+		vertical-align:middle;
+		margin:0 -5%;
+	}
+	
+	.fs_landing {
+		position:relative;
+		left:auto;
+		top:auto;
+		display:inline-block;
+		width:740px;
+		height:auto;
+		vertical-align:middle;
+		z-index:10;
+	}
+	
+	.fs_landing_top {
+		position:relative;
+		left:auto;
+		top:auto;
+		position:absolute;
+		z-index:1;
+	}
+	
+	.fs_landing_top .fs_features {
+		-webkit-transform:scale(0.6);
+		transform:scale(0.6);
+		margin:0 0 -10px 0;
+	}
+	
+	.fs_landing_top .fs_title {
+		margin:-5px 0 10px 0;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:16px;	
+	}
+	
+	.fs_landing_center {
+		position:relative;
+		left:auto;
+		bottom:auto;
+	}
+	
+	.fs_8k_box {
+		width:740px;
+		height:447px;
+		background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv_sp.png?$ORIGIN_PNG$') no-repeat center center;
+		background-size:cover;
+	}
+	
+	.fs_8k_box_item {
+		left:3px;
+		top:3px;
+		width:734px;
+		height:414px;
+	}
+	
+	.fs_8k_bg {
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;	
+	}
+	
+	.fs_slogan {
+		width:77%;
+		height:auto;
+		bottom:auto;
+		top:180px;
+	}
+	
+	.fs_slogan img {
+		width:100%;
+		height:auto;	
+	}
+	
+	.fs_but a {
+		-webkit-transition:none;
+		transition:none;
+		width:200px;
+		height:50px;
+		line-height:50px;
+		font-size:18px;
+		-webkit-border-radius:30px;
+		border-radius:30px;
+		letter-spacing:normal;
+		text-transform:inherit;
+		background-color:rgba(0,0,0,0.7);
+	}
+	
+	.fs_but a:hover {
+		background-color:rgba(0,0,0,0.7);
+		color:#fff;
+	}
+	
+	.fs_landing_bottom {
+		margin-top:0;
+		position:absolute;
+		left:0;
+		bottom:50px;
+	}
+
+
+	/*Features*/
+	.fs_compare .fs_wrapper::before, .fs_compare .fs_wrapper::after, 
+	.fs_quantum .fs_wrapper::before, .fs_quantum .fs_wrapper::after, 
+	.fs_upscaling .fs_wrapper::before, .fs_upscaling .fs_wrapper::after, 
+	.fs_extra .fs_wrapper::before, .fs_extra .fs_wrapper::after,
+	.fs_star .fs_wrapper::before, .fs_star .fs_wrapper::after {
+		margin:0 -5%;
+	}
+	
+	.fs_star .fs_title h2 {
+		font-size:26px;
+		line-height:40px;
+	}
+	
+	.fs_star .fs_title h2 br:first-child {
+		display:none;
+	}
+	
+	.fs_star_bg {
+		width:740px;
+		height:447px;
+	}
+	
+	.fs_star_detail, .fs_compare_detail {
+		left:3px;
+		top:3px;
+		width:734px;
+		height:414px;
+		padding:19px 0 0 0;
+	}
+	
+	
+	.fs_star .fs_features {
+		top:auto;
+		-webkit-transform:none;
+		transform:none;
+		margin:0;
+	}
+	
+	.fs_star .fs_landing_bottom {
+		position:absolute;
+		left:0;
+		bottom:50px;
+	}
+	
+	.fs_star .fs_but a {
+		width:160px;
+		height:50px;
+		line-height:50px;
+	}
+	
+	.fs_compare_item h3 {
+		right:10px;
+		top:10px;
+		font-size:22px;
+		line-height:22px;
+	}
+	
+	.fs_icon_step {
+		width:55px;
+	}
+	
+	.fs_icon_step li {
+		width:39px;
+		height:38px;
+	}
+	
+	.fs_brief_step li {
+		font-size:13px;
+		left:15px;
+	}
+	
+	.fs_compare_slider {
+		width:1px;
+	}
+	
+	.fs_slider_nav {
+		width:56px;
+		height:56px;
+		margin:-26px 0 0 -26px;
+	}
+	
+	.fs_slider_next, .fs_slider_prev {
+		width:28px;
+		height:56px;
+	}
+	
+	.fs_resolution {
+		right:15px;
+		bottom:15px;
+	}
+	
+	.fs_is_overlay .fs_resolution {
+		left:15px;
+	}
+	
+	.fs_resolution_icon {
+		width:40px;
+		height:40px;
+		margin-left:15px;
+	}
+	
+	.fs_is_overlay .fs_resolution_icon {
+		margin-right:15px;
+	}
+	
+	.fs_resolution span {
+		height:40px;
+		max-width:120px;
+		line-height:40px;
+		font-size:13px;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+	}
+	
+	.fs_upscaling_container  {
+		padding:5%;
+	}
+	
+	.fs_upscaling_video_thumb {
+		width:28%;
+	}
+	
+	.fs_upscaling_video_box  {
+		width:66%;
+	}
+	
+	.fs_upscaling_note {
+		margin-bottom:3%;
+	}
+	
+	.fs_upscaling_note h3, .fs_upscaling_note h3.fs_8k_note {
+		font-size:16px;
+	}
+	
+	.fs_upscaling_item::before {
+		display:none;	
+	}
+	
+	.fs_upscaling_item::after {
+		-webkit-transition:none;
+		transition:none;
+		display:none;
+	}
+	
+	.fs_upscaling_inner video {
+		width:100%;
+		height:auto;
+		
+	}
+	
+	.fs_upscaling_detail span {
+		margin-top:0;
+		font-size:12px;
+	}
+	
+	.fs_upscaling_note span {
+		width:78px;
+		border:1px dashed #fff;
+		margin:0 20px 0 13px;
+	}
+	
+	.fs_upscaling_note span::after {
+		right:-12px;
+		top:-4px;
+		border:8px solid #fff;
+		border-top:4px solid transparent;
+		border-bottom:4px solid transparent;
+		border-right:0;
+	}
+	
+	.fs_quantum_note h3 {
+		font-size:18px;
+	}
+	
+	.fs_quantum_list {
+		top:18px;
+	}
+	
+	.fs_quantum_txt h3 {
+		font-size:18px;
+	}
+	
+	
+	.fs_compare .fs_title, .fs_upscaling .fs_title, .fs_quantum .fs_title {
+		width:724px;
+		margin-bottom:20px;
+	}
+	
+	.fs_compare .fs_title h2, .fs_quantum .fs_title h2, .fs_upscaling .fs_title h2 {
+		font-size:24px;
+		color:#b99179;
+		text-transform:uppercase;
+	}
+	.fs_compare .fs_title p, .fs_quantum .fs_title p, .fs_upscaling .fs_title p{
+		font-size:14px;
+		
+	}
+	
+	.fs_compare .fs_landing_bottom, .fs_upscaling .fs_landing_bottom, .fs_quantum  .fs_landing_bottom, .fs_step {
+		width:auto;
+		height:auto;
+		position:static;
+		left:auto;
+		bottom:auto;
+		margin:0;
+	}
+	
+	.fs_step li {
+		position:fixed;
+		top:50vh;
+		margin:-21px 0 0 0;
+	}
+	
+	.fs_step li:nth-child(1) {
+		left:12px;
+	}
+	
+	.fs_step li:nth-child(2) {
+		right:12px;
+	}
+	
+	.fs_step li a {
+		font-size:0;
+		width:42px;
+		height:42px;
+		-webkit-border-radius:50%;
+		border-radius:50%;
+	}
+	
+	.fs_step li a.fs_prev {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_prev.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:25px 14px;
+		background-color:rgba(0,0,0,0.7);
+	}
+	
+	.fs_step li a.fs_next {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_next.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:25px 14px;
+		background-color:rgba(0,0,0,0.7);
+	}
+	
+	.fs_step li a::after {
+		display:none !important;
+	}
+	
+	.fs_form_inner, .fs_form_popup  .fs_normal_banner {
+		max-width:740px;
+	}
+	
+	.fs_form_inner .fs_title {
+		display:none;
+	}
+	
+	.fs_form_box {
+		width:100%;
+		padding:30px 60px;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:15px;
+	}
+	
+	.fs_form_logo img {
+		max-width:90px;
+	}
+	
+	.fs_form_title {
+		margin-bottom:20px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:18px;
+	}
+	
+	.fs_group {
+		margin-top:25px;
+	}
+	
+	.fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		height:35px;
+		padding:8px 0 7px 0;
+	}
+	
+	.fs_select_header p, .fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		font-size:14px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:17px;	
+	}
+	
+	.fs_form_box button {
+		height:44px;
+		line-height:44px;
+		-webkit-border-radius:30px;
+		border-radius:30px;
+		font-size:18px;
+		-webkit-transition:none;
+		transition:none;
+	}
+	
+	.fs_form_box button:hover {
+		background-color:#fff;
+		color:#b99178;
+	}
+	
+	.fs_select_header::after {
+		width:9px;
+		height:9px;
+		border-right:2px solid #949494;
+		border-bottom:2px solid #949494;
+	}
+	
+	.fs_select {
+		height:35px;
+	}
+	
+	.fs_select_header p {
+		line-height:35px;
+	}
+	
+	.fs_select_box {
+		padding-top:34px;
+	}
+	
+	.fs_select_box ul {
+		padding:10px;
+	}
+	
+	.fs_select_box li {
+		font-size:14px;
+		padding:10px 20px;
+		-webkit-transition:none;
+		transition:none;
+	}
+	
+	.fs_select_box li:not(.selected):hover {
+		background-color:#fff;
+	}
+	
+	.fs_banner:hover .fs_hover_banner {
+		height:auto;
+	}
+	
+	.fs_extra .fs_title {
+		margin-bottom:18px;
+	}
+	
+	.fs_extra .fs_title p {
+		font-size:18px;
+		line-height:22px;
+		padding:0;
+	}
+	
+	.fs_extra_box {
+		width:calc(100% - 28px)
+	}
+	
+	.fs_extra_detail {
+		width:100%;
+	}
+	
+	.fs_extra_list {
+		height:auto;
+		font-size:0;
+		white-space:nowrap;
+	}
+	
+	.fs_extra_item:nth-child(1),
+	.fs_extra_item:nth-child(2),
+	.fs_extra_item:nth-child(3),
+	.fs_extra_item:nth-child(4),
+	.fs_extra_item:nth-child(5) {
+		-webkit-transform:none;
+		transform:none;
+		position:relative;
+		left:auto;
+		top:auto;
+		display:inline-block;
+		width:19%;
+		vertical-align:top;
+		margin:0 4px;
+	}
+	
+	.fs_extra_txt {
+		padding:10px 7px 10px 24px;
+		min-height:auto;
+		height:auto;
+		min-height:185px;
+	}
+	
+	.fs_extra_txt h3 {
+		font-size:13px;
+		line-height:16px;
+		margin:0;
+		white-space:normal;
+		margin-bottom:7px;
+	}
+	
+	.fs_extra_txt h3 br {
+		display:none;
+	}
+	
+	.fs_extra_txt h3::before {
+		width:12px;
+		height:12px;
+		left:-18px;
+		top:-2px;
+	}
+	
+	.fs_extra_txt p {
+		white-space:normal;
+		font-size:10px;
+	}
+	
+	
+	.fs_extra .fs_banner {
+		width:740px;
+		margin:20px auto 0 auto;
+	}
+	
+	.fs_share {
+		position:fixed;
+		right:14px;
+		top:25px;
+		left:auto;
+		bottom:auto;
+	}
+	
+	.fs_share a {
+		width:160px;
+		height:40px;
+		font-size:16px;
+		-webkit-border-radius:30px;
+		border-radius:30px;
+		line-height:40px;
+		padding-left:65px;
+	}
+	
+	.fs_share a::before {
+		width:20px;
+		height:20px;
+		top:10px;
+		left:30px;
+	}
+	
+	
+}
+
+@media screen and (max-width:900px) and (orientation :landscape){
+	
+	/*Logo*/
+	.fs_main_logo {
+		left:10px;
+		top:15px;
+	}
+	
+	.fs_main_logo img {
+		max-width:80px;
+	
+	}
+	
+	/*Landing*/
+	.fs_intro .fs_wrapper::before, .fs_intro  .fs_wrapper::after {
+		content:'';
+		position:relative;
+		display:inline-block;
+		width:0;
+		height:100%;
+		vertical-align:middle;
+		margin:0 -5%;
+	}
+	
+	.fs_landing {
+		position:relative;
+		left:auto;
+		top:auto;
+		display:inline-block;
+		width:456px;
+		height:auto;
+		vertical-align:middle;
+		z-index:10;
+	}
+	
+	.fs_landing_top {
+		position:relative;
+		left:auto;
+		top:auto;
+		position:absolute;
+		z-index:1;
+	}
+	
+	.fs_landing_top .fs_features {
+		-webkit-transform:scale(0.6);
+		transform:scale(0.6);
+		margin:0 0 -10px 0;
+	}
+	
+	.fs_landing_top .fs_title {
+		margin:-5px 0 10px 0;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:12px;	
+	}
+	
+	.fs_landing_center {
+		position:relative;
+		left:auto;
+		bottom:auto;
+	}
+	
+	.fs_8k_box {
+		width:456px;
+		height:276px;
+		background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv_sp.png?$ORIGIN_PNG$') no-repeat center center;
+		background-size:cover;
+	}
+	
+	.fs_8k_box_item {
+		left:2px;
+		top:2px;
+		width:452px;
+		height:256px;
+	}
+	
+	.fs_8k_bg {
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;	
+	}
+	
+	.fs_slogan {
+		width:77%;
+		height:auto;
+		bottom:auto;
+		top:110px;
+	}
+	
+	.fs_slogan img {
+		width:100%;
+		height:auto;	
+	}
+	
+	.fs_but a {
+		-webkit-transition:none;
+		transition:none;
+		width:160px;
+
+		height:32px;
+		border:1px solid #9c9c9b;
+		line-height:32px;
+		font-size:13px;
+		-webkit-border-radius:16px;
+		border-radius:16px;
+		letter-spacing:normal;
+		text-transform:inherit;
+		background-color:rgba(0,0,0,0.6);
+	}
+	
+	.fs_but a:hover {
+		background-color:rgba(0,0,0,0.6);
+		color:#fff;
+	}
+
+	.fs_intro .fs_but a {
+		font-size:18px;
+		text-transform:uppercase;
+		height:40px;
+		line-height:40px;
+		-webkit-border-radius:30px;
+		border-radius:30px;
+	}
+	
+	.fs_landing_bottom {
+		bottom:35px;
+	}
+	
+	.fs_star .fs_but a {
+		margin:0 3px;
+	}
+	
+
+	/*Features*/
+	.fs_star .fs_title {
+		margin-bottom:10px;
+	}
+	
+	.fs_star .fs_title h2 {
+		font-size:18px;
+		line-height:26px;
+	}
+	
+	.fs_star .fs_title h2 br:nth-child(1), .fs_star .fs_title h2 br:nth-child(3) {
+		display:none;
+	}
+	
+	.fs_star_bg {
+		width:456px;
+		height:276px;
+	}
+	
+	.fs_star_detail, .fs_compare_detail {
+		left:2px;
+		top:2px;
+		width:452px;
+		height:256px;
+		padding:14px 0 0 0;
+	}
+	
+	.fs_logo {
+		width:82px;
+		height:auto;
+		margin:0 0 41px 0;
+	}
+	
+	.fs_logo img {
+		width:100%;
+		height:auto
+	}
+	
+	.fs_star .fs_features {
+		top:auto;
+		-webkit-transform:none;
+		transform:none;
+		margin:0;
+	}
+	
+	.fs_star_icon {
+		width:25px;
+		height:24px;
+	}
+	
+	.fs_star .fs_features ul li h3, .fs_features ul li h3 {
+		font-size:9px;
+		line-height:13px;
+	}
+	
+	.fs_features ul li h3::after {
+		width:20px;
+		height:3px;	
+		margin-top:0;
+	}
+	
+	.fs_features ul:first-child {
+		padding:0 8px 0 0;	
+	}
+	
+	.fs_features ul:last-child {
+		padding:0 0 0 6px;	
+	}
+	
+	.fs_features li:nth-child(1) .fs_star_icon::before, 
+	.fs_features li:nth-child(1) .fs_star_icon::after {
+		width:16px;
+		height:15px;
+	}
+	
+	.fs_features li:nth-child(2) .fs_star_icon::before, 
+	.fs_features li:nth-child(2) .fs_star_icon::after {
+		width:19px;
+		height:18px;
+	}
+	
+	.fs_features li:nth-child(3) .fs_star_icon::before, 
+	.fs_features li:nth-child(3) .fs_star_icon::after {
+		width:22px;
+		height:21px;
+	}
+	
+	.fs_features li:nth-child(4) .fs_star_icon::before, 
+	.fs_features li:nth-child(4) .fs_star_icon::after {
+		width:25px;
+		height:24px;
+	}
+	
+	.fs_features ul:first-child li:nth-child(1) {
+		padding-right:45px;
+		margin:0 0 5px 0;	
+	}
+	.fs_features ul:first-child li:nth-child(1) h3 {
+		right:68px;
+	}
+	
+	.fs_features ul:first-child li:nth-child(2) {
+		padding-right:45px;
+		margin:0 0 3px 0;	
+	}
+	.fs_features ul:first-child li:nth-child(2) h3 {
+		right:68px;
+	}
+	
+	.fs_features ul:first-child li:nth-child(3) {
+		padding-right:29px;
+		margin:0 0 -10px 0;	
+	}
+	.fs_features ul:first-child li:nth-child(3) h3 {
+		right:57px;
+	}
+	
+	.fs_features ul:first-child li:nth-child(4) h3 {
+		top:auto;
+		bottom:-22px;
+		margin:0 0 0 22px;
+	}
+	.fs_features ul:first-child li:nth-child(4) h3::after {
+		right:auto;
+		left:50%;
+		margin-left:-10px;
+	}
+	
+	.fs_features ul:last-child li:nth-child(1) {
+		padding-left:43px;
+		margin:0 0 5px 0;	
+	}
+	.fs_features ul:last-child li:nth-child(1) h3 {
+		left:68px;
+	}
+	
+	.fs_features ul:last-child li:nth-child(2) {
+		padding-left:42px;
+		margin:0 0 3px 0;	
+	}
+	.fs_features ul:last-child li:nth-child(2) h3 {
+		left:68px;
+	}
+	
+	.fs_features ul:last-child li:nth-child(3) {
+		padding-left:29px;
+		margin:0 0 -10px 0;	
+	}
+	.fs_features ul:last-child li:nth-child(3) h3 {
+		left:68px;
+	}
+	
+	.fs_features ul:last-child li:nth-child(4) h3 {
+		top:auto;
+		margin:0;
+		bottom:-22px;
+		margin:0 22px 0 0;
+	}
+	.fs_features ul:last-child li:nth-child(4) h3::after {
+		margin-left:-10px;	
+	}
+	
+	.fs_star .fs_landing_bottom {
+		position:absolute;
+		left:0;
+		bottom:30px;
+	}
+	
+	.fs_star .fs_but a {
+		width:120px;
+		height:32px;
+		line-height:32px;
+	}
+	
+	.fs_compare_item h3 {
+		right:10px;
+		top:10px;
+		font-size:16px;
+		line-height:15px;
+	}
+	
+	.fs_icon_step {
+		width:30px;
+	}
+	
+	.fs_icon_step li {
+		width:20px;
+		height:20px;
+	}
+	
+	.fs_brief_step li {
+		font-size:9px;
+		left:12px;
+	}
+	
+	.fs_compare_slider {
+		width:1px;
+	}
+	
+	.fs_resolution {
+		right:10px;
+		bottom:10px;
+	}
+	
+	.fs_is_overlay .fs_resolution {
+		left:10px;
+	}
+	
+	.fs_resolution_icon {
+		width:30px;
+		height:30px;
+		margin-left:10px;
+	}
+	
+	.fs_is_overlay .fs_resolution_icon {
+		margin-right:10px;
+	}
+	
+	.fs_resolution span {
+		height:30px;
+		max-width:120px;
+		line-height:30px;
+		font-size:10px;
+		-webkit-border-radius:2px;
+		border-radius:2px;
+	}
+	
+	.fs_upscaling_container  {
+		padding:5%;
+	}
+	
+	.fs_upscaling_video_thumb {
+		width:28%;
+	}
+	
+	.fs_upscaling_video_box  {
+		width:66%;
+	}
+	
+	.fs_upscaling_note {
+		margin-bottom:22px;
+	}
+	
+	.fs_upscaling_item::before {
+		display:none;	
+	}
+	
+	.fs_upscaling_inner video {
+		width:100%;
+		height:auto;
+		
+	}
+	
+	.fs_upscaling_note h3 {
+		height:35px;
+	}
+	
+	.fs_upscaling_note h3, .fs_upscaling_note h3.fs_8k_note{
+		font-size:12px;
+	}
+	
+	.fs_upscaling_item .fs_brief_nav, .fs_upscaling_item:nth-child(2) .fs_brief_nav {
+		-webkit-transform:translateY(10px);
+		transform:translateY(10px);
+	}
+	
+	.fs_upscaling_detail span {
+		padding:2px 0 0 0;
+		font-size:8px;
+	}
+	
+	.fs_upscaling_note span {
+		width:48px;
+		border:1px dashed #fff;
+		margin:0 20px 0 13px;
+	}
+	
+	.fs_upscaling_note span::after {
+		right:-12px;
+		top:-4px;
+		border:8px solid #fff;
+		border-top:4px solid transparent;
+		border-bottom:4px solid transparent;
+		border-right:0;
+	}
+	
+	.fs_quantum_note h3 {
+		font-size:14px;
+	}
+	
+	.fs_quantum_list {
+		top:18px;
+		height:auto;
+	}
+	
+	.fs_quantum_txt h3 {
+		font-size:12px;
+	}
+	
+	.fs_compare .fs_title, .fs_upscaling .fs_title, .fs_quantum .fs_title {
+		width:456px;
+		margin-bottom:7px;
+	}
+	
+	.fs_compare .fs_title h2, .fs_quantum .fs_title h2, .fs_upscaling .fs_title h2 {
+		font-size:13px;
+		margin-bottom:5px;
+	}
+	
+	.fs_compare .fs_title p, .fs_quantum .fs_title p, .fs_upscaling .fs_title p {
+		padding:0;
+		font-size:9px;
+	}
+	
+	.fs_compare .fs_landing_bottom, .fs_upscaling .fs_landing_bottom, .fs_quantum  .fs_landing_bottom, .fs_step {
+		width:auto;
+		height:auto;
+		position:static;
+		left:auto;
+		bottom:auto;
+		margin:0;
+	}
+	
+	.fs_step li {
+		position:fixed;
+		top:50vh;
+		margin:-41px 0 0 0;
+	}
+	
+	.fs_step li:nth-child(1) {
+		left:12px;
+	}
+	
+	.fs_step li:nth-child(2) {
+		right:12px;
+	}
+	
+	.fs_step li a {
+		font-size:0;
+		width:42px;
+		height:42px;
+		-webkit-border-radius:50%;
+		border-radius:50%;
+	}
+	
+	.fs_step li a.fs_prev {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_prev.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:25px 14px;
+		background-color:rgba(0,0,0,0.7);
+	}
+	
+	.fs_step li a.fs_next {
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_next.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:25px 14px;
+		background-color:rgba(0,0,0,0.7);
+	}
+	
+	.fs_step li a::after {
+		display:none !important;
+	}
+	
+	
+	/*form*/
+	.fs_form_inner, .fs_form_popup .fs_normal_banner {
+		max-width:440px;
+	}
+	.fs_form_inner {
+		top:-30px;
+	}
+	
+	.fs_form_popup .fs_banner {
+		bottom:5px;
+	}
+	
+	.fs_form_inner .fs_title {
+		display:none;
+	}
+	
+	.fs_form_box {
+		width:100%;
+		padding:9px 20px;
+	}
+	
+	.fs_form_logo {
+		margin-bottom:6px;
+	}
+	
+	.fs_form_logo img {
+		max-width:40px;
+	}
+	
+	.fs_form_title {
+		margin-bottom:5px;
+	}
+	
+	.fs_group {
+		margin-top:12px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:8px;	
+	}
+	
+	.fs_form_box button {
+		height:30px;
+		line-height:30px;
+		font-size:13px;
+	}
+	
+
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:12px;
+	}
+	
+	.fs_form_thanks p {
+		margin:15px 0;
+	}
+	
+	.fs_btn_follow {
+		width:170px;
+		font-size:14px;
+	}
+	
+	.fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		height:25px;
+		line-height:25px;
+		padding:8px 0 3px 0;
+	}
+	
+	.fs_group input[type="number"] {
+		padding:0;	
+	}
+	
+	.fs_select_header p, .fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		font-size:10px;
+	}
+	
+	.fs_select_header::after {
+		width:9px;
+		height:9px;
+		border-right:2px solid #949494;
+		border-bottom:2px solid #949494;
+	}
+	
+	.fs_select_txt {
+		padding:0 10px;
+	}
+	
+	.fs_select {
+		height:25px;
+	}
+	
+	.fs_select_header p {
+		line-height:25px;
+	}
+	
+	.fs_select_box {
+		padding:0;
+		top:auto;
+		bottom:30px;
+	}
+	
+	.fs_lev_2 {
+		z-index:5;	
+	}
+	
+	.fs_lev_4 {
+		z-index:3;	
+	}
+	
+	.fs_select_box ul {
+		padding:5px;
+	}
+	
+	.fs_select_box li {
+		font-size:10px;
+		padding:5px;
+		-webkit-transition:none;
+		transition:none;
+	}
+	
+	.fs_select_box li:not(.selected):hover {
+		background-color:#fff;
+	}
+	
+	.fs_error_mess {
+		font-size:10px;
+		margin-bottom:5px;
+	}
+	
+	.fs_banner:hover .fs_hover_banner {
+		height:auto;
+	}
+	
+	.fs_extra .fs_title {
+		margin-bottom:10px;
+	}
+	
+	.fs_extra .fs_title p {
+		font-size:11px;
+		line-height:16px;
+		padding:0;
+	}
+	
+	.fs_extra_box {
+		width:100%;
+	}
+	
+	.fs_extra_detail {
+		width:100%;
+	}
+	
+	.fs_extra_list {
+		height:auto;
+		font-size:0;
+		white-space:nowrap;
+	}
+	
+	.fs_extra_item:nth-child(1),
+	.fs_extra_item:nth-child(2),
+	.fs_extra_item:nth-child(3),
+	.fs_extra_item:nth-child(4),
+	.fs_extra_item:nth-child(5) {
+		-webkit-transform:none;
+		transform:none;
+		position:relative;
+		left:auto;
+		top:auto;
+		display:inline-block;
+		width:19%;
+		vertical-align:top;
+		margin:0 2px;
+	}
+	
+	.fs_extra_txt {
+		padding:10px 5px 10px 20px;
+		height:auto;
+		min-height:163px;
+	}
+	
+
+	.fs_extra_txt h3 {
+		font-size:10px;
+		line-height:14px;
+		margin:0 0 5px 0;
+		white-space:normal;
+	}
+	
+	.fs_extra_txt h3 br {
+		display:none;
+	}
+	
+	.fs_extra_txt h3::before {
+		width:12px;
+		height:12px;
+		left:-16px;
+		top:-2px;
+	}
+	
+	.fs_extra_txt p {
+		white-space:normal;
+		height:auto;
+		font-size:9px;
+	}
+	
+	.fs_extra .fs_banner {
+		width:480px;
+		margin:5px auto 0 auto;
+	}
+	
+	.fs_share {
+		position:fixed;
+		right:10px;
+		top:15px;
+		left:auto;
+		bottom:auto;
+	}
+	
+	.fs_share a {
+		width:120px;
+		height:32px;
+		font-size:14px;
+		-webkit-border-radius:30px;
+		border-radius:30px;
+		line-height:32px;
+		padding-left:45px;
+	}
+	
+	.fs_share a::before {
+		width:16px;
+		height:16px;
+		top:7px;
+		left:21px;
+	}
+	
+	.fs_select_box ul {
+		max-height:120px;
+		-webkit-overflow-scrolling:touch;
+	}
+}
+
+@media screen and (max-width:900px) and (max-height:380px) and (orientation :landscape){
+
+	.fs_extra_txt {
+		min-height:155px;
+	}
+	
+	.fs_extra_txt h3 {
+		font-size:9px;
+	}
+	.fs_extra_txt p {
+		font-size:8px;
+	}
+	
+}
+
+@media screen and (max-width:650px) and (orientation :landscape){
+	
+	/*Landing*/
+	.fs_landing_top .fs_title {
+		margin:-13px 0 6px 0;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:12px;	
+	}
+	
+	.fs_star_bg {
+		width:380px;
+		height:230px;
+	}
+	
+	.fs_star_detail, .fs_compare_detail {
+		left:2px;
+		top:2px;
+		width:376px;
+		height:214px;
+		padding:10px 0 0 0;
+	}
+	
+	.fs_star .fs_title h2 {
+		font-size:13px;
+		line-height:18px;
+	}
+	
+	.fs_star .fs_features {
+		-webkit-transform:scale(.86);
+		transform:scale(.86);
+		top:-10px;
+	}
+	
+	.fs_features ul:first-child li:nth-child(4) h3,
+	.fs_features ul:last-child li:nth-child(4) h3 {
+		bottom:-19px;	
+	}
+	
+	.fs_star .fs_landing_bottom {
+		bottom:26px;
+	}
+	
+	.fs_form_inner, .fs_form_popup .fs_normal_banner {
+		max-width:360px;
+	}
+
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:10px;
+	}
+	
+	.fs_form_box {
+		padding:9px 12px;
+	}
+	
+	.fs_group  {
+		margin-top:10px;
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:6px;	
+	}
+	
+	.fs_extra_detail {
+		margin-top:15px;
+	}
+	
+	.fs_extra .fs_banner {
+		margin:5px auto 0 auto;
+		width:360px;
+	}
+	
+	
+	.fs_compare .fs_title, .fs_upscaling .fs_title, .fs_quantum .fs_title {
+		width:380px;
+		margin-bottom:7px;
+	}
+	
+	.fs_compare .fs_title h2, .fs_quantum .fs_title h2, .fs_upscaling .fs_title h2 {
+		font-size:11px;
+		margin-bottom:5px;
+	}
+	
+	.fs_compare .fs_title p, .fs_quantum .fs_title p, .fs_upscaling .fs_title p {
+		padding:0;
+		font-size:7px;
+	}
+	
+	.fs_upscaling_item .fs_brief_nav {
+		width:120px;
+	}
+	.fs_brief_nav p {
+		font-size:8px;
+	}
+	
+	.fs_extra .fs_title p {
+		font-size:10px;
+		line-height:12px;
+	}
+	
+	.fs_share {
+		right:10px;
+		top:10px;
+	}
+	
+	.fs_share a {
+		width:96px;
+		height:30px;
+		font-size:12px;
+		padding-left:38px;
+		line-height:30px;
+	}
+	
+	.fs_share a::before {
+		top:7px;
+		left:15px;
+	}
+	
+	.fs_extra_txt {
+		min-height:148px;
+	}
+	
+	.fs_extra_txt p {
+		font-size:7px;
+	}
+}
+
+@media screen and (max-width:900px) and (max-height:362px) and (orientation :landscape){ 
+	.fs_landing {
+		-webkit-transform:scale(0.9);
+		transform:scale(0.9);
+	}
+	
+	.fs_upscaling_container {
+		padding:3% 5% 5% 5%;
+	}
+	
+	.fs_upscaling_note {
+		margin-bottom:10px;
+	}
+	
+	.fs_compare .fs_title, .fs_upscaling .fs_title, .fs_quantum .fs_title {
+		margin-bottom:5px;
+	}
+	
+	.fs_group {
+		margin-top:5px;	
+	}
+	.fs_group.fs_but_group {
+		margin-top:7px;	
+	}
+	.fs_form_box button {
+		height:24px;
+		line-height:24px;
+		font-size:11px;
+	}
+	
+}
+
+
+/* Mobile portrait */
+@media screen and (max-width:1100px) and (orientation :portrait) {
+	
+	/*Logo*/
+	.fs_main_logo { 
+		left:17px;
+		top:18px;
+	}
+	.fs_main_logo img {
+		max-width:125px;
+	}
+	
+	/*bg*/
+	.fs_bg::before, .fs_bg::after {
+		display:none;
+	}
+	
+	.fs_bg_cm {
+		display:none;
+	}
+	
+	.fs_bg_spv {
+		display:block;
+	}
+
+
+	
+	/* Landing */
+	.fs_intro_bg_pc, .fs_intro_bg_sp, .fs_8k_bg.fs_hide_pc, .fs_slogan img.fs_hide_pc {
+		display:none;
+	}
+	
+	.fs_landing_top {
+		margin-bottom:0;	
+	}
+	
+	.fs_landing_top .fs_title{
+		margin-bottom:0;
+	}
+	
+	.fs_8k_bg.fs_hide_pc.fs_sp_v, .fs_landing_top .fs_title p br:nth-child(2) {
+		display:block;
+	}
+	
+	.fs_slogan img.fs_hide_pc.fs_sp_v {
+		display:block;
+		width:auto;
+		height:auto;
+		margin:0 auto;
+		max-width:100%;
+	}
+	
+	.fs_intro_bg_sp.fs_sp_v  {
+		display:block;
+		background-position:center center;
+	}
+	
+	.fs_landing {
+		width:340px;
+		top:-10px;
+	}
+	
+	.fs_landing_top .fs_features {
+		-webkit-transform:scale(0.42);
+		transform:scale(0.42);
+		margin:-30px 0;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:16px;	
+	}
+	
+	.fs_8k_box {
+		position:relative;
+		left:auto;
+		top:auto;
+		width:100%;
+		height:auto;	
+		background:none;
+		height:380px;
+	}
+	
+	.fs_8k_bg, .fs_slogan {
+		display:none;
+	}
+	
+	.fs_slogan_spv {
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		margin:-15px auto -10px auto;
+		-webkit-transform:scale(0.9);
+		transform:scale(0.9);
+	}
+	
+	.fs_slogan_spv img {
+		position:relative;
+		display:block;
+		width:auto;
+		height:auto;
+		margin:0 auto;
+		max-width:100%;
+	}
+	
+	.fs_8k_box_spv {
+		position:relative;
+		display:block;
+		width:340px;
+		height:205px;
+		background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv.png?$ORIGIN_PNG$') no-repeat center center;
+		background-size:cover;
+		margin:0 auto;
+	}
+	
+	.fs_8k_bg_spv {
+		position:absolute;
+		left:0;
+		top:0;
+		left:2px;
+		top:2px;
+		width:336px;
+		height:190px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:cover;
+	}
+	
+	.fs_landing .fs_landing_bottom {
+		margin-top:5px;
+	}
+	
+	.fs_but a, .fs_star .fs_but a {
+		width:260px;
+		height:60px;
+		line-height:60px;
+		padding:0 15px;
+		margin:0;
+		padding:0;
+		font-size:18px;	
+		-webkit-border-radius:30px;
+		border-radius:30px;
+		background-color:rgba(0,0,0,0.8);
+		-webkit-transition:none;
+		transition:none;
+	}
+	
+	.fs_but a:hover {
+		background-color:rgba(0,0,0,0.8);
+	}
+	
+	
+	
+	/*Star*/
+	.fs_star_box {
+		width:340px;
+		height:auto;
+		top:20px;
+	}
+	
+	.fs_star_bg {
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		background:none;
+	}
+	
+	.fs_star .fs_landing_bottom {
+		margin-top:40px;	
+	}
+	
+	.fs_star_detail {
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		left:auto;
+		top:auto;
+		padding:0;
+	}
+	
+	.fs_star .fs_title	 {
+		margin-bottom:30px;
+	}
+	
+	.fs_star .fs_title h2 {
+		font-size:28px;
+	}
+	
+	.fs_star .fs_title h2 br:nth-child(1), .fs_star .fs_title h2 br:nth-child(2), .fs_star .fs_title h2 br:nth-child(3) {
+		display:block;
+	}
+	
+	.fs_star_detail .fs_features ul h3{
+		display:none;
+	}
+	
+	.fs_star .fs_star_detail > .fs_features {
+		display:none;
+	}
+	
+	.fs_tv_spv, .fs_features_title_spv {
+		position:relative;
+		display:block;
+	}
+	
+	.fs_tv_spv {
+		position:relative;
+		display:block;
+		width:340px;
+		height:205px;
+		background:url('https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_8k_tv.png?$ORIGIN_PNG$') no-repeat center center;
+		background-size:cover;
+		margin:0 auto;
+	}
+	
+	.fs_star .fs_features {
+		top:17px;
+		-webkit-transform:scale(0.75);
+		transform:scale(0.75);
+		margin:0;
+	}
+	
+	.fs_features_title_spv {
+		margin-top:25px;
+		height:60px;
+	}
+	
+	.fs_features_title_spv ul, .fs_features_title_spv li {
+		display:block;
+	}
+	
+	.fs_features_title_spv li {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+	}
+		
+	.fs_features_title_spv li h3 {
+		font-size:20px;
+		line-height:28px;
+		color:#fff;
+		opacity:0;
+		-webkit-transition:opacity 0.3s ease-in-out;
+		transition:opacity 0.3s ease-in-out;
+	}
+	
+	.fs_features_title_spv li.fs_play h3, .fs_features_title_spv li.active h3 {
+		opacity:1;
+	}
+	
+	/*Title step*/
+	.fs_compare .fs_landing_bottom, 
+	.fs_quantum .fs_landing_bottom, 
+	.fs_upscaling .fs_landing_bottom {
+		position:absolute;
+		bottom:15px;	
+		margin:0;
+	}
+	
+	.fs_compare_box .fs_title {
+		margin:0;
+	}
+	
+	.fs_compare_box .fs_title h2 {
+		font-size:22px;
+	}
+	
+	.fs_compare_box .fs_title h2 br {
+		display:block;
+	}
+	
+	.fs_quantum .fs_compare_box .fs_title h2 br:last-child {
+		display:none;
+	}
+	
+	.fs_compare_box .fs_title p {
+		display:none;
+	}
+	
+	
+	/*Brief step*/
+	.fs_brief_spv {
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		margin-top:20px;
+	}
+	
+	.fs_quantum  .fs_brief_spv {
+		margin-top:5px;
+	}
+	
+	.fs_brief_spv p {
+		font-size:12px;
+		color:#fff;
+		text-shadow:0 2px 2px rgba(0,0,0,0.3);
+	}
+	
+	.fs_upscaling .fs_brief_spv {
+		padding:30px 5% 0 5%;
+		margin:0
+	}
+	
+	/*Compare*/
+	.fs_step_star {
+		left:0;
+		top:57px;
+		position:absolute;
+		width:100%;
+		height:auto;
+		z-index:12;
+		padding:0 17px;
+		white-space:nowrap;
+		display:block;
+		visibility:hidden;
+		opacity:0;
+		-webkit-transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+		transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+	}
+	
+	.fs_step_star.show {
+		opacity:1;
+		visibility:visible;
+		-webkit-transition-delay:0s, 0s;
+		transition-delay:0s, 0s;		
+	}
+	
+	.fs_step_star li {
+		position:relative;
+		display:inline-block;
+		width:16px;
+		height:14px;
+		margin-right:26.5px;
+	}
+	
+	.fs_step_star li::before {
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon-normal.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:cover;
+	}
+	
+	.fs_step_star li::after {
+		content:'';
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_star_icon.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:cover;
+		opacity:0;
+		-webkit-transition:opacity 0.3s ease-in-out;
+		transition:opacity 0.3s ease-in-out;
+	}
+	
+	.fs_step_star li.active::after {
+		opacity:1;	
+	}
+	
+	.fs_icon_step, .fs_brief_step {
+		display:none;
+	}
+	
+	.fs_compare .fs_wrapper::before, 
+	.fs_compare .fs_wrapper::after, 
+	.fs_quantum .fs_wrapper::before, 
+	.fs_quantum .fs_wrapper::after, 
+	.fs_upscaling .fs_wrapper::before, 
+	.fs_upscaling .fs_wrapper::after, 
+	.fs_extra .fs_wrapper::before, .fs_extra .fs_wrapper::after {
+		display:none;	
+	}
+	
+	.fs_compare_box {
+		position:absolute;
+		left:0;
+		top:auto;
+		bottom:0;
+		width:100%;
+		height:calc(100% - 90px);
+	}
+	
+	.fs_compare .fs_star_bg,
+	.fs_quantum .fs_star_bg,
+	.fs_upscaling .fs_star_bg {
+		position:absolute;
+		left:0;
+		top:auto;
+		width:100%;
+		height:calc(100% - 130px);
+		bottom:68px;
+		padding:10px 0;
+		overflow:hidden;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:auto;
+	}
+	
+	.fs_star_bg::before, 
+	.fs_star_bg::after {
+		content:'';
+		position:relative;
+		display:inline-block;
+		width:0;
+		height:100%;
+		vertical-align:middle;
+	}
+	
+	.fs_compare_detail {
+		position:relative;
+		left:auto;
+		top:auto;
+		display:inline-block;
+		width:100%;
+		height:auto;
+		vertical-align:middle;
+	}
+	
+	.fs_compare_container {
+		position:relative;
+		display:block;
+		left:auto;
+		top:auto;
+		width:100%;
+		height:auto;
+	}
+	
+	.fs_compare_container::before {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		padding-top:56.3%;
+	}
+	
+	.fs_compare_item h3 {
+		top:8px;
+		right:8px;
+		font-size:12px;
+	}
+	
+	.fs_resolution {
+		right:15px;
+		bottom:5px;
+	}
+	
+	.fs_resolution_icon {
+		width:30px;
+		height:30px;
+		margin-left:9px;
+	}
+	
+	.fs_resolution span {
+		width:100px;
+		height:30px;
+		line-height:30px;
+		font-size:10px;
+		-webkit-border-radius:2px;
+		border-radius:2px;
+	}
+	
+	.fs_is_overlay .fs_resolution {
+		left:15px;
+	}
+	
+	.fs_is_overlay .fs_resolution_icon {
+		margin-right:9px;
+	}
+	
+	.fs_compare_slider {
+		width:1px;
+	}
+	
+	.fs_slider_nav .fs_brief_nav {
+		padding:5px 10px;
+	}
+	
+	.fs_brief_nav p {
+		font-size:9px;
+	}
+	
+	.fs_step li a {
+		font-size:22px;
+	}
+	
+	.fs_step li a.fs_prev::after {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:25px;
+		margin-top:5px;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_prev.png?$ORIGIN_PNG$) no-repeat right center;
+		background-size:auto 25px;
+	}
+	
+	.fs_step li a.fs_next::after {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:25px;
+		margin-top:5px;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_next.png?$ORIGIN_PNG$) no-repeat left center;
+		background-size:auto 25px;
+	}
+	
+		
+	/*Upscaling*/
+	.fs_upscaling_container {
+		position:relative;
+		display:block;
+		left:auto;
+		top:auto;
+		width:100%;
+		height:auto;
+		padding:0;
+	}
+	
+	.fs_upscaling_note {
+		display:none;
+	}
+	
+	.fs_upscaling_note_spv {
+		position:relative;
+		display:block;
+		width:76.8%;
+		height:auto;
+		margin:0 auto 7px auto;
+		display:block;
+		font-size:12px;
+		height:auto;
+		color:#fff;
+		text-align:left;
+	}
+	
+	.fs_upscaling_item .fs_brief_nav {
+		left:74%;
+		bottom:94%;	
+	}
+	
+	.fs_is_playing .fs_upscaling_item:nth-child(1) .fs_brief_nav {
+		left:74%;
+		right:auto;	
+		text-align:left;
+	}
+	
+	.fs_is_playing .fs_upscaling_item:nth-child(1) .fs_brief_nav::before {
+		opacity:1;
+	}
+	
+	.fs_is_playing .fs_upscaling_item:nth-child(1) .fs_brief_nav::after {
+		opacity:0;
+	}
+	
+	.fs_upscaling_item:nth-child(2) .fs_brief_nav {
+		-webkit-transform:translateY(-10px);
+		transform:translateY(-10px);
+	}
+	
+	.fs_is_playing .fs_upscaling_item:nth-child(2) .fs_brief_nav {
+		right:20%;
+	}
+	
+	.fs_upscaling_detail::before {
+		display:none;
+	}
+	
+	.fs_upscaling_inner {
+		position:relative;
+		display:block;
+		left:auto;
+		top:auto;
+		width:100%;
+		height:auto;
+	}
+	
+	.fs_upscaling_video_thumb, .fs_upscaling_video_box {
+		float:none;
+	}
+	
+	.fs_upscaling_video_thumb {
+		width:76.8%;
+		margin:0 auto 30px auto;
+	}
+	
+	.fs_upscaling_video_thumb::after {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:0;
+		clear:both;
+	}
+	
+	.fs_upscaling_item {
+		position:relative;
+		display:block;
+		width:46.5%;
+		height:auto;
+		margin:0;
+		float:left;
+	}
+	
+	.fs_upscaling_item:last-child {
+		position:relative;
+		left:auto;
+		bottom:auto;
+		float:right;
+	}
+	
+	.fs_upscaling_item::before {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		padding-top:56.7%;
+	}
+	
+	.fs_upscaling_item::after {
+		display:none;
+	}
+	
+	.fs_upscaling_item:hover::before {
+		opacity:0;
+	}
+	
+	.fs_upscaling_detail span {
+		padding:0;
+		margin:3px 0 0 0;
+		font-size:10px;
+		width:100%;
+		text-align:left;
+	}
+	
+	.fs_upscaling_video_box {
+		width:90%;
+		margin:0 auto;
+	}
+	
+	.fs_upscaling_video_box::before {
+		content:'';
+		position:relative;
+		display:block;
+		width:100%;
+		height:auto;
+		padding-top:56.2%;
+	}
+	
+	.fs_upscaling_inner video {
+		width:100%;
+		height:auto;
+	}
+	
+	.fs_upscaling_inner .fs_brief_spv p br{
+		display:none;
+	}
+	
+	
+	/*Quantum*/
+	.fs_quantum_container {
+		position:relative;
+		display:block;
+		left:auto;
+		top:auto;
+		width:100%;
+		height:auto;
+		padding:0;
+	}
+	
+	.fs_sound_bg {
+		background:none !important;
+	}
+	
+	.fs_quantum_list, .fs_quantum_note {
+		display:none;
+	}
+	
+	.fs_quantum_box {
+		display:block;
+		margin:0 auto;
+	}
+	
+	.fs_quantum_box .fs_swiper-slide-active .fs_quantum_item_slide {
+		-webkit-box-shadow:0 0 10px 3px rgba(255,255,255,1);
+		box-shadow:0 0 10px 1px rgba(255,255,255,1);
+	}
+
+	.fs_quantum_txt h3 {
+		font-size:16px;	
+	}
+	
+	.fs_quantum .fs_brief_spv {
+		padding:0 5%;	
+	}
+	
+	.fs_quantum .fs_brief_spv p br {
+		display:none;	
+	}
+	
+	.fs_quantum_nav {
+		display:block;
+	}
+	
+	.fs_quantum_next, .fs_quantum_prev {
+		position:absolute;
+		width:40px;
+		height:40px;
+		top:50%;
+		margin-top:-20px;
+		z-index:5;
+	}
+	
+	.fs_quantum_next {
+		right:5px;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_quantum_next.png?$ORIGIN_PNG$) no-repeat center center;
+	}
+	
+	.fs_quantum_prev {
+		left:5px;	
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_quantum_prev.png?$ORIGIN_PNG$) no-repeat center center;
+	}
+	
+	
+	/*Extra*/
+	.fs_extra_box {
+		position:absolute;
+		left:0;
+		top:auto;
+		bottom:0;
+		width:100%;
+		height:calc(100% - 90px);	
+		overflow:hidden;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:auto;
+		
+	}
+	
+	.fs_extra .fs_title, .fs_extra_list{
+		display:none;
+	}
+	
+	.fs_extra_detail {
+		position:relative;
+		left:0;
+		top:auto;
+		width:100%;
+		height:auto;
+		min-height:100%;
+	}
+	
+	.fs_extra_slide_box {
+		display:block;
+		margin:0 auto 10px auto;
+	}
+	
+	.fs_extra_pic {
+		padding-top:78%;
+	}
+	
+	.fs_extra_txt {
+		padding:25px 23px 0 47px;
+		min-height:200px;
+	}
+	
+	.fs_extra_txt h3 {
+		font-size:16px;
+	}
+	
+	.fs_extra_txt h3::before {
+		width:22px;
+		height:22px;
+		left:-32px;
+		top:-3px;
+	}
+	
+	.fs_extra_txt p {
+		font-size:11px;	
+		height:auto;
+		line-height:16px;
+	}
+	
+	.fs_extra_nav {
+		display:block;
+	}
+	
+	.fs_extra_next, .fs_extra_prev {
+		position:absolute;
+		width:40px;
+		height:40px;
+		top:50%;
+		margin-top:-20px;
+		z-index:5;
+	}
+	
+	.fs_extra_next {
+		right:0;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_quantum_next.png?$ORIGIN_PNG$) no-repeat center center;
+	}
+	
+	.fs_extra_prev {
+		left:0;	
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_quantum_prev.png?$ORIGIN_PNG$) no-repeat center center;
+	}
+	
+	
+	.fs_step li a {
+		font-size:16px;
+		line-height:22px;
+	}
+	
+	.fs_step li a.fs_next::after, .fs_step li a.fs_prev::after {
+		height:16px;
+		background-size:auto 16px;
+	}
+
+	.fs_extra_next.swiper-button-disabled, .fs_extra_prev.swiper-button-disabled {
+		opacity:0.2;
+	}
+	
+	.fs_extra_box .fs_banner {
+		width:90%;
+		height:auto;
+		margin:0 auto;
+	}
+		
+	.fs_extra_box .fs_banner img {
+		display:none;
+	}
+	
+	.fs_extra_box .fs_banner img.fs_sp_v {
+		display:block;	
+	}
+	
+	
+	/*facebook*/
+	.fs_share {
+		display:none;
+	}
+	
+	.fs_share_sp {
+		position:absolute;
+		display:block;
+		top:18px;
+		right:63px;
+		left:auto;
+		z-index:12;
+		visibility:hidden;
+		opacity:0;
+		-webkit-transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+		transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+	}
+	
+	.fs_share_sp.show {
+		visibility:visible;
+		opacity:1;
+	}
+	
+	.fs_share_sp a {
+		position:relative;
+		display:block;
+		width:25px;
+		height:25px;
+	}
+	
+	.fs_share_sp a::before {
+		content:'';
+		position:absolute;
+		width:100%;
+		height:100%;
+		left:0;
+		top:0;
+		background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_facebook_icon.png?$ORIGIN_PNG$) no-repeat center center;
+		background-size:cover;
+	}
+	
+	
+	/*indicator*/
+	.fs_indicator, .fs_indicator.fs_show_indicator {
+		display:block;
+	}
+	
+	.fs_indicator {
+		display:block;
+		position:absolute;
+		right:0;
+		top:0;
+		width:100%;
+		height:100%;
+		-webkit-transform:none;
+		transform:none;
+		background-image:linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+		visibility:hidden;
+		opacity:0;
+		-webkit-transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+		transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+	}
+	
+	.fs_indicator.fs_open_indicator {
+		opacity:1;
+		visibility:visible;
+		-webkit-transition-delay:0s, 0s;
+		transition-delay:0s, 0s;
+	}
+	
+	.fs_indicator_icon {
+		display:none;	
+	}
+	
+	.fs_indicator ul {
+		display:block;
+		width:100%;
+		padding:83px 18px 0 18px;	
+	}
+	
+	.fs_indicator ul li {
+		display:block;
+		border-top:2px solid #414141;
+		margin:0;
+		padding:28px 0;
+	}
+	
+	.fs_indicator_txt {
+		display:block;
+		margin:0;
+		opacity:1;
+		font-size:24px;	
+		-webkit-transition:none;
+		transition:none;
+		text-align:center;
+	}
+	
+	.fs_nav_indi {
+		position:absolute;
+		top:18px;
+		right:10px;
+		width:25px;
+		height:25px;
+		z-index:12;
+		cursor:pointer;
+		display:block;
+		visibility:hidden;
+		opacity:0;
+		-webkit-transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;	
+		transition:all 0.3s ease-in-out 0s, visibility 0s linear 0.3s;
+	}
+	
+	.fs_nav_indi.show {
+		opacity:1;
+		visibility:visible;
+		-webkit-transition-delay:0s, 0s;
+		transition-delay:0s, 0s;
+	}
+	
+	.fs_nav_indi ul {
+		position:absolute;
+		left:0;
+		top:0;
+		width:100%;
+		height:100%;
+	}
+	
+	.fs_nav_indi li {
+		position:absolute;
+		left:50%;
+		width:5px;
+		height:5px;
+		-webkit-border-radius:50%;
+		border-radius:50%;
+		background-color:#fff;
+	}
+	
+	.fs_nav_indi li {
+		-webkit-transform:translateX(-50%) translateY(0);
+		transform:translateX(-50%) translateY(0);
+	}
+	
+	.fs_nav_indi li:nth-child(2) {
+		-webkit-transform:translateX(-50%) translateY(10px);
+		transform:translateX(-50%) translateY(10px);
+	}
+	
+	.fs_nav_indi li:nth-child(3) {
+		-webkit-transform:translateX(-50%) translateY(20px);
+		transform:translateX(-50%) translateY(20px);
+	}
+	
+	.fs_nav_indi li:nth-child(2)::before {
+		content:'';
+		position:absolute;
+		left:50%;
+		top:0;
+		width:25px;
+		height:4px;
+		background-color:#fff;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		opacity:0;
+		-webkit-transform:translateX(-50%) rotate(0deg);
+		transform:translateX(-50%) rotate(0deg);
+		-webkit-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+	}
+	
+	.fs_nav_indi li:nth-child(2)::after {
+		content:'';
+		position:absolute;
+		left:50%;
+		top:0;
+		width:25px;
+		height:4px;
+		background-color:#fff;
+		-webkit-border-radius:4px;
+		border-radius:4px;
+		opacity:0;
+		-webkit-transform:translateX(-50%) rotate(0deg);
+		transform:translateX(-50%) rotate(0deg);
+		-webkit-transition:all 0.3s ease-in-out;
+		transition:all 0.3s ease-in-out;
+	}
+	
+	.fs_nav_indi.fs_open_indicator li:nth-child(1), .fs_nav_indi.fs_open_indicator li:nth-child(3) {
+		opacity:0;	
+	}
+	
+	.fs_nav_indi.fs_open_indicator li:nth-child(2)::before{
+		opacity:1;
+		-webkit-transform:translateX(-50%) rotate(-45deg);
+		transform:translateX(-50%) rotate(-45deg);
+	}
+	
+	.fs_nav_indi.fs_open_indicator li:nth-child(2)::after{
+		opacity:1;
+		-webkit-transform:translateX(-50%) rotate(45deg);
+		transform:translateX(-50%) rotate(45deg);
+	}
+	
+	
+	/*FORM*/
+	.fs_form_inner {
+		position:absolute;
+		left:0;
+		top:auto;
+		bottom:0;
+		display:block;
+		width:100%;
+		height:calc(100% - 90px);
+		padding:20px 0;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		
+	}
+	
+	.fs_form_box {
+		width:92%;
+		height:auto;
+		max-width:342px;
+		margin:0 auto;
+	}
+	
+	.fs_title_pc {
+		display:none;
+	}
+	
+	.fs_title_sp {
+		display:block;
+	}
+	
+	.fs_form_title {
+		margin-bottom:15px;	
+	}
+	.fs_form_logo {
+		margin-bottom:12px;
+	}
+	
+	.fs_form_logo img {
+		max-width:80px;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:16px;	
+	}
+	
+	.fs_form_box {
+		padding:15px 20px 22px 20px;
+	}
+	
+	.fs_col, .fs_col:nth-child(2) {
+		float:none;
+		width:100%;
+	}
+	
+	.fs_group {
+		margin-top:26px;
+	}
+	
+	.fs_select_header p, .fs_group input[type="tel"], .fs_group input[type="text"], .fs_group input[type="password"], .fs_group input[type="number"] {
+		font-size:14px;	
+	}
+	
+	.fs_select_header::after {
+		width:10px;
+		height:10px;
+		border-right:2px solid #949494;
+	    border-bottom:2px solid #949494;
+	}
+	
+	.fs_select_box ul {
+		padding:5px;
+	}
+	
+	.fs_select_box li {
+		padding:5px 10px;
+		font-size:14px;	
+	}
+	
+	.fs_form_popup::before, .fs_form_popup::after {
+		display:none;
+	}
+	
+	.fs_form_box button {
+		max-width:160px;
+		font-size:14px;
+		height:32px;
+		line-height:32px;
+	}
+	
+	.fs_form_popup .fs_title, .fs_form_popup .fs_banner {
+		display:none;	
+	}
+	
+	.fs_select_box {
+		padding:0;
+		bottom:40px;
+		top:auto;
+		box-shadow:0 0px 8px rgba(3, 3, 3, 0.2);
+	}
+	
+	.fs_select_box ul {
+		box-shadow:none;
+	}
+	
+	.fs_select_txt {
+		padding:0 10px;	
+	}
+	
+	.fs_lev_5 {
+		z-index:4;
+	}
+	
+	.fs_lev_4 {
+		z-index:5;
+	}
+	
+	.fs_lev_3 {
+		z-index:6;
+	}
+	
+	.fs_lev_2 {
+		z-index:7;
+	}
+	
+	.fs_form_thanks p {
+		margin:30px 0;	
+	}
+	
+}
+
+@media screen and (max-width:1100px) and (max-height:640px) and (orientation :portrait){ 
+	
+	/*Step star*/
+	.fs_step_star li {
+		margin-right:27px;
+	}
+	
+	/*Landing*/
+	.fs_landing {
+		top:auto;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:13px;
+	}
+	
+	.fs_slogan_spv {
+		width:90%;
+		margin:-5px auto;
+	}
+
+	.fs_landing .fs_landing_bottom {
+		margin-top:0;
+	}
+	
+	.fs_but a, .fs_star .fs_but a {
+		height:50px;
+		line-height:50px;
+		font-size:16px;
+	}
+	
+	/*form*/
+	.fs_group {
+		margin-top:15px;	
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:17px;
+	}
+	
+	.fs_title_pc {
+		display:none;
+	}
+	
+	.fs_title_sp {
+		display:block;	
+	}
+
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:15px;	
+	}
+	
+	
+}
+
+
+
+@media screen and (max-width:1100px) and (min-width:400px) and (max-height:640px) and (orientation :portrait){ 
+		
+	.fs_extra_slider {
+		width:320px;	
+	}
+	
+	.fs_extra_txt {
+		min-height:190px;	
+	}
+}
+
+@media screen and (max-width:1100px) and (min-width:400px) and (orientation :portrait) {
+	.fs_step_star li {
+		margin-right:32px;	
+	}
+}
+
+@media screen and (max-width:1100px) and (max-height:600px) and (orientation :portrait){ 
+	/*Landing*/
+	.fs_landing_top .fs_features {
+		-webkit-transform:scale(0.35);
+		transform:scale(0.35);
+		margin:-40px 0;
+	}
+	
+	.fs_landing_top .fs_title p {
+		font-size:12px;
+	}
+	
+	.fs_8k_box {
+		height:340px;
+	}
+	
+	.fs_8k_box_spv  {
+		width:302px;
+		height:182px;
+	}
+	
+	.fs_8k_bg_spv {
+		width:298px;
+		height:167px;
+	}
+	
+	.fs_slogan_spv {
+		width:76%;
+		margin:-5px auto -5px auto;
+	}
+	
+	/*Star*/
+	.fs_star_box {
+		top:10px;
+	}
+	
+	.fs_star .fs_features {
+		top:7px;
+		-webkit-transform:scale(0.7);
+		transform:scale(0.7);
+	}
+	
+	.fs_tv_spv{
+		width:302px;
+		height:182px;
+	}
+	
+	.fs_star .fs_title {
+		margin-bottom:15px;
+	}
+	
+	.fs_star .fs_title h2 {
+		font-size:18px;
+	}
+	
+	.fs_features_title_spv li h3 {
+		font-size:16px;
+	}
+	
+	
+	/*Quantum*/
+	.fs_quantum_slider {
+		width:240px;
+		height:278px;
+		margin:10px auto;
+	}
+	
+	
+}
+
+@media screen and (max-width:1100px) and (max-height:530px) and (orientation :portrait){ 
+	.fs_landing {
+		-webkit-transform:scale(.8);
+		transform:scale(.8);
+		top:-35px;
+	}
+	
+	.fs_star .fs_star_box {
+		-webkit-transform:scale(.8);
+		transform:scale(.8);
+	}
+	
+	.fs_compare_box .fs_title h2 {
+		font-size:18px;	
+	}
+	
+	.fs_step_star li {
+		margin-right:19px;	
+	}
+
+	.fs_brief_nav, .fs_upscaling_item .fs_brief_nav {
+		width:130px;
+		padding:7px;
+	}
+
+	.fs_extra_slider {
+		width:280px;	
+	}
+	
+	.fs_upscaling_note_spv {
+		font-size:10px;	
+	}
+
+}
+
+
+
+
+@media screen and (max-width:500px) { 
+
+	/*FORM*/
+	.fs_form_inner, .fs_form_popup .fs_normal_banner {
+		max-width:inherit !important;
+	}
+	
+	.fs_form_inner {
+		position:absolute;
+		left:0 !important;
+		top:auto !important;
+		bottom:0 !important;
+		display:block !important;
+		width:100% !important;
+		height:calc(100% - 90px) !important;
+		padding:20px 0 !important;
+		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
+		
+	}
+	
+	.fs_form_popup.show_thanks {
+		padding:20px 0 !important;
+	}
+	
+	.fs_form_box {
+		display:block !important;
+		width:90% !important;
+		height:auto !important;
+		max-width:340px !important;
+		margin:0 auto !important;
+		padding:15px 20px 22px 20px !important;
+	}
+	
+	.fs_title_pc {
+		display:none;
+	}
+	
+	.fs_title_sp {
+		display:block;
+	}
+	
+	.fs_form_title {
+		margin-bottom:15px;	
+	}
+	
+	.fs_form_logo {
+		margin-bottom:12px;
+	}
+	
+	.fs_form_logo img {
+		width:80% !important;
+		max-width:80px !important;
+	}
+	
+	.fs_form_title p, .fs_form_thanks p {
+		font-size:16px;	
+	}
+	
+	.fs_col, .fs_col:nth-child(2) {
+		float:none !important;
+		width:100% !important;
+	}
+	
+	.fs_group {
+		margin-top:26px;
+	}
+	
+	.fs_select_header p, .fs_group input[type="tel"], 
+	.fs_group input[type="text"], .fs_group input[type="password"], 
+	.fs_group input[type="number"] {
+		font-size:14px;	
+	}
+	
+	.fs_select_header::after {
+		width:10px;
+		height:10px;
+		border-right:2px solid #949494;
+	    border-bottom:2px solid #949494;
+	}
+	
+	.fs_select_box ul {
+		padding:5px;
+	}
+	
+	.fs_select_box li {
+		padding:5px 10px;
+		font-size:14px;	
+	}
+	
+	.fs_form_popup::before, 
+	.fs_form_popup::after {
+		display:none;
+	}
+	
+	.fs_form_box button {
+		max-width:160px;
+		font-size:14px;
+		height:32px;
+		line-height:32px;
+	}
+	
+	.fs_form_popup .fs_title, 
+	.fs_form_popup .fs_banner {
+		display:none;	
+	}
+	
+	.fs_select_box {
+		padding:0;
+		bottom:40px;
+		top:auto;
+		box-shadow:0 0px 8px rgba(3, 3, 3, 0.2);
+	}
+	
+	.fs_select_box ul {
+		box-shadow:none;
+	}
+	
+	.fs_select_txt {
+		padding:0 10px;	
+	}
+	
+	.fs_lev_5 {
+		z-index:4;
+	}
+	
+	.fs_lev_4 {
+		z-index:5;
+	}
+	
+	.fs_lev_3 {
+		z-index:6;
+	}
+	
+	.fs_lev_2 {
+		z-index:7;
+	}
+	
+	.fs_form_thanks p {
+		margin:30px 0;	
+	}
+	
+	.fs_group.fs_but_group {
+		margin-top:15px;
+	}
+	
+}
+
+
+
+@media screen and (max-width:370px) { 
+	.fs_form_thanks p {
+		margin:15px 0;
+		font-size:13px;
+	}
+}
+
+
+
+
+
+
+
+
+
+/*MODAL APP*/
+#fs_defaultModal{position:absolute;width:100%;height:100%;left:0;top:0;right:0;bottom:0;padding:0;z-index:1050;display:none;opacity:0}
+#fs_defaultModal.fs_fade_os, #fs_defaultModal.fs_fade_ad{opacity:1}
+
+.fs_modal_content{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	background:url(https://images.samsung.com/is/image/samsung/p5/vn/8k-qled/fs_bg_clock.png?$ORIGIN_PNG$) no-repeat center center;
+	background-size:cover;
+	background-color:#000;
+	text-align:center;
+}
+
+.fs_modal_content::before, .fs_modal_content::after{
+	content:'';
+	position:relative;
+	display:inline-block;
+	vertical-align:middle;
+	width:0;
+	height:100%;
+	margin:0 -5%;
+}
+
+.fs_modal{
+	position:relative;
+	width:94%;
+	height:auto;
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+	color:#fff;
+}
+
+.fs_modal h2 {
+	font-size:24px;
+	line-height:32px;
+	color:#fff;
+	margin-bottom:27px;
+}
+
+.fs_modal p {
+	font-size:18px;
+	color:#fff;
+	margin-bottom:50px;
+}
+
+.fs_modal span {
+	display:inline-block;
+	font-size:12px;
+}
+
+.fs_modal span img {
+	margin-left:8px;
+}
+
+.fs_modal h3 {
+	font-size:18px;
+	color:#fff;
+	margin-bottom:10px;
+}
+
+.fs_app_os, .fs_app_ad {
+	position:relative;
+	display:none;
+}
+
+.fs_fade_os .fs_app_os{
+	display:block;
+}
+
+.fs_fade_ad .fs_app_ad{
+	display:block;
+}
+
+.fs_modal ul, .fs_modal li {
+	position:relative;
+	display:block;
+}
+
+.fs_modal li {
+	margin-bottom:47px;
+}
+
+.fs_modal li:last-child {
+	margin-bottom:0;
+}
+
+.fs_modal li img {
+	width:auto;
+	height:auto;
+	max-width:100%;
+}
+
+
+@media screen and (max-width:1100px) and (orientation :landscape){
+	.fs_modal h2 {
+		font-size:14px;
+		margin-bottom:10px;
+		line-height:16px;
+	}
+	
+	.fs_modal p {
+		font-size:12px;
+		margin-bottom:20px;
+	}
+	
+	.fs_modal h3 {
+		font-size:13px;
+		margin-bottom:5px;
+	}
+	
+	.fs_modal li {
+		margin-bottom:20px;
+	}
+	
+}
+ 
